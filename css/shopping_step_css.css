@@ -1,0 +1,76 @@
+.bg-container {
+  min-height: 730px;
+}
+
+.step_right {
+  font-size: 2em;
+  color: #aa00ff;
+}
+.step_box {
+  width: 12vw;
+  height: 100px;
+  background-image: url("../img/now_step.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.step_box.active {
+  background-image: url("../img/another_step.svg");
+}
+.step_box p {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+}
+.step_border {
+  border: 1px solid #fff;
+}
+.step_border_top {
+  border-top: 1px solid #fff;
+}
+.step_border_top_B {
+  border-top: 1px solid #222;
+}
+.quantity_inside_val {
+  width: 35px;
+}
+.step_product_img {
+  max-width: 200px;
+  height: 180px;
+  overflow: hidden;
+}
+.step_product_massage {
+  margin: 0 auto;
+}
+.step_product_bgc {
+  background-color: #413e53;
+}
+.step_cancel_bgc {
+  background-color: #412f8f;
+}
+.step_prodct_max_w {
+  max-width: 700px;
+}
+.step_product_bgc_2 {
+  background-color: #7165a7;
+}
+.step_payment_spacing {
+  letter-spacing: 0.25em;
+}
+.mobile_step_box {
+  width: 30px;
+  height: 30px;
+  /* border:1px solid #fff; */
+  border-radius: 50%;
+  background-color: #7165a7;
+}
+.mobile_step_box2 {
+  width: 30px;
+  height: 30px;
+  /* border:1px solid #fff; */
+  border-radius: 50%;
+  background-color: #413e53;
+}

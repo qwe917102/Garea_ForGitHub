@@ -1,0 +1,187 @@
+.member_center_page_name {
+  max-width: 1140px;
+}
+
+.member_center_page_name h4,
+.member_center_page_name h5 {
+  color: #fbcc4d;
+}
+
+.member_center_page_name .member_nickname_title a {
+  background: none;
+  color: #ffffff;
+}
+
+.member_center_page_name .member_nickname_title a:hover {
+  background: none;
+  color: #ffffff;
+}
+
+.member_center_page_name .member_nickname_title a.member_logout:hover {
+  color: #fbcc4d;
+}
+
+.member_center_page_name h4 .member_nickname {
+  width: 185px;
+  text-align: left;
+}
+
+.member_center_page_name h5 .member_nickname {
+  /* width: 140px; */
+  text-align: left;
+}
+
+.member_center_tabs {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.member_center_tab_button {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member_center_tab_button li {
+  display: table-cell;
+  width: 25%;
+}
+
+.member_center_tab_button li a {
+  display: block;
+  padding: 0.5em;
+  background: #413e53;
+  text-align: center;
+  color: #ad9aff;
+  text-decoration: none;
+  height: 42px;
+  transition: 0.3s;
+}
+
+.member_center_tab_button li:not(:first-child) a {
+  border-left: none;
+}
+
+.member_center_tab_button li a:hover,
+.member_center_tab_button .is-active a {
+  background: #7165a7;
+  color: #ffffff;
+}
+
+.member_center_tab_contents {
+  padding: 0.5em 2em 1em;
+  color: #ffffff;
+  background: #7165a7;
+  min-height: 650px;
+}
+
+.member_center_tab03 .row .order_list {
+  max-width: 960px;
+  min-height: 380px;
+}
+
+.member_center_tab03 .row .order_list .btn-lg,
+.member_center_tab03 .row .order_list .btn-md {
+  background: #412f8f;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+}
+
+.member_center_tab03 .row .order_list .btn-lg:hover,
+.member_center_tab03 .row .order_list .btn-md:hover {
+  background: #413e53;
+  border: 1px solid #cccccc;
+}
+
+.member_center_tab03 .order_searchbar input {
+  border-radius: 0;
+}
+
+.member_center_tab03 .order_searchbar .btn {
+  height: 38px;
+}
+
+.member_center_tab03 .order_searchbar .form-control:focus {
+  box-shadow: none !important;
+}
+
+.member_center_tab03 .row .order_searchbar .btn {
+  background: #412f8f;
+  border-radius: 0;
+}
+
+.member_center_tab03 .row .dash_line {
+  max-width: 1140px;
+  height: 2px;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.member_center_tab03 .row .order_list .accordion {
+  max-width: 960px;
+  margin: 0 auto 25px auto;
+}
+
+.member_center_tab03 .row .accordion .card {
+  border-radius: 0;
+  border: 0;
+  text-align: center;
+}
+.divide_line:last-of-type {
+  display: none;
+}
+.member_center_tab03 .row .accordion .card .card-header {
+  background: #2a2057;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.member_center_tab03 .row .accordion .card .card-header .btn {
+  background: #412f8f;
+  border-top: 1px solid #cccccc;
+  border-radius: 0;
+}
+
+.member_center_tab03 .row .accordion .card .card-header .btn:hover {
+  background: #413e53;
+  /* border-top: 1px solid #cccccc; */
+}
+
+.member_center_tabs .row .accordion .card .collapse_textcolor {
+  background: #413e53;
+}
+
+.member_center_tabs .row .accordion .card .collapse_textcolor .order_detail {
+  color: #ffffff;
+}
+
+.member_center_tab03 .row .accordion .card_a {
+  width: 140px;
+  height: 140px;
+}
+
+.member_center_tab03 .row .accordion .divide_line {
+  max-width: 1140px;
+  height: 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+.member_center_tab03 .row .accordion .order_product_detail {
+  font-size: 16px;
+}
+
+.member_center_tab03
+  .row
+  .accordion
+  .order_detail
+  .order_detail_price_tag
+  .order_detail_price {
+  color: #fbcc4d;
+  font-size: 18px;
+}
+
+.member_center_tab03 .row .collapse .order_detail .order_cancel:hover {
+  color: #7165a7 !important;
+}

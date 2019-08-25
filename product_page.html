@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="js/vegas/vegas.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="js/lightslider/css/lightslider.css">
+
+</head>
+<style>
+	body {
+		background: #2A2057;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+
+	.auto_bgc {
+		background-color: #211751;
+	}
+
+	.product_bgc {
+		background-color: rgba(33, 23, 81, .7);
+	}
+
+	.auto_textcolor {
+		color: #fff;
+		letter-spacing: 3.5px
+	}
+
+	.auto_textcolor:hover {
+		text-decoration: none;
+		color: #FFCD1D;
+	}
+
+	.nav-item {
+		text-align: right;
+	}
+
+	.vegas_bg {
+		background-position: top center;
+		background-size: cover;
+		z-index: -1;
+	}
+
+	.bg_dark {
+		background-color: rgba(0, 0, 0, .3);
+	}
+
+	.moblie_Logo {
+		width: 150px;
+		height: 60px;
+	}
+
+	.web_logo_mobile {
+		width: 300px;
+		height: auto;
+	}
+
+	header nav {
+		transition: .5s;
+		z-index: 99;
+	}
+
+	nav.active {
+		opacity: 0;
+		transform: translateY(-130px);
+	}
+
+	.deck_top_prduct_hover {
+		transform: translateY(-130px);
+		transition: .5s;
+	}
+
+	.deck_top_prduct_hover.active {
+		transform: translateY(-130px);
+		opacity: 0;
+	}
+
+	.deck_top_SearchBar {
+		transform: translateY(-130px);
+		opacity: 0;
+		transition: .5s;
+	}
+
+	.deck_top_SearchBar.active {
+		transform: translateY(70px);
+		opacity: 1;
+		transition: .5s;
+	}
+
+	.decktop_main_nav {
+		z-index: 90
+	}
+
+	.decktop_main_nav .nav_btn ul {
+		justify-content: space-between
+	}
+
+	.m-vw {
+		z-index: 99;
+		transform: translateX(-100vw);
+		transition: .5s;
+	}
+
+	.deck_top_hover_position {
+		left: -95%;
+	}
+
+	.deck_top_hover_position.plus {
+		left: -150%;
+	}
+
+	.slide_in_right {
+		transform: translateX(0vw);
+	}
+
+	.w-65 {
+		width: 65vw;
+	}
+
+	.w-10 {
+		width: 60px;
+	}
+
+	.w-20 {
+		max-width: 180px;
+		height: auto;
+	}
+
+	.w-0 {
+		width: 0vw;
+	}
+
+	.vh-75 {
+		height: 75vh;
+	}
+
+	.bordeR_bt_solid_1px_white {
+		border-bottom: 1px solid rgba(255, 255, 255, .25);
+	}
+
+	/* 	.about_big_btn::after{
+	content: "";
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 20%;
+    border-top: 20px solid #f6f6f6;
+    border-right: 20px solid transparent;
+	} */
+	@keyframes glowing {
+		0% {
+			box-shadow: 0 0 -20px #CF2Dff;
+		}
+
+		40% {
+			box-shadow: 0 0 40px #CF2Dff;
+		}
+
+		60% {
+			box-shadow: 0 0 40px #CF2Dff;
+		}
+
+		100% {
+			box-shadow: 0 0 -20px #CF2Dff;
+		}
+	}
+
+	.button-glow {
+		animation: glowing 3000ms 500ms infinite;
+	}
+
+	.sectin-ul .accordion_item:hover #corsair .st2 {
+		fill: #FFCD1D;
+	}
+
+	/* --------section slider--------- */
+
+	.sectin-ul {
+		box-sizing: border-box;
+		display: flex;
+		overflow: hidden;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.sectin-ul li {
+		display: flex;
+		/* flex: 1; */
+		transition: all .5s ease;
+		align-items: center;
+		text-align: center;
+		padding: 5px;
+	}
+
+	.sectin-ul li.active {
+		/* flex: 5; */
+		cursor: default;
+	}
+
+	.sectin-ul li.active .section-content {
+		flex: 1;
+		opacity: 1;
+		transform: scaleX(1);
+	}
+
+	.sectin-ul li .section-content {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		opacity: 0;
+		transition: all 1s .1s ease-out;
+	}
+
+	/* .sectin-ul li .section-content a{
+	display: none
+} */
+
+	/* .sectin-ul .sectin-title{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	width: 15vw;
+} */
+	/* --------slider plugin----------- */
+	.text_color {
+		color: #FFCD1D;
+	}
+
+
+	/* -----area2---- */
+	.slogan {
+		position: absolute;
+		bottom: 0;
+	}
+
+	.fit-image {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	.glow-border {
+		box-shadow:
+			inset 0 0 0px #fff,
+			/* inner white */
+			inset 10px 0 10px #f0f,
+			/* inner left magenta short */
+			inset -10px 0 10px #0ff,
+			/* inner right cyan short */
+			inset 10px 0 10px #f0f,
+			/* inner left magenta broad */
+			inset -10px 0 10px #0ff,
+			/* inner right cyan broad */
+			0 0 0px #fff,
+			/* outer white */
+			0px 0 20px #f0f,
+			/* outer left magenta */
+			0px 0 20px #0ff;
+		/* outer right cyan */
+	}
+
+	/* -----footer----- */
+	.vh-25 {
+		height: 25vh;
+	}
+
+	.footer_font_size {
+		font-size: .85em;
+	}
+
+	.footer_icon_size {
+		font-size: 1.25em;
+	}
+
+	.footer__icon_font_size {
+		font-size: .25em;
+	}
+
+	.w-32 {
+		width: 50%;
+	}
+
+	.w-20 {
+		width: 20%;
+	}
+
+	.footer_textcolor {
+		color: #fff;
+		letter-spacing: 1.5px
+	}
+
+	.footer_textcolor:hover {
+		text-decoration: none;
+		color: #FFCD1D;
+	}
+
+	.cursor_point {
+		cursor: pointer
+	}
+
+	/* .product_bigImg {
+		/* background-image: url("img/discovery-20190618-1.jpg"); */
+		/* background-image:url("img/News/1920550.jpg"); */
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 100%;
+		height: 50vh;
+	} */
+
+	.GA_title {
+		background: #7165A7;
+		width: 18%;
+		/* height: 35px; */
+		position: relative;
+		clip-path: polygon(50% 25%, 100% 25%, 100% 43%, 87% 100%, 0 100%, 0% 25%);
+	}
+
+	.GA_title::after {
+		content: "";
+		border: 3px solid #fff;
+		width: 300px;
+		position: absolute;
+		top: 10px;
+		left: 50px;
+		display: block;
+		z-index: 99;
+	}
+
+	.GA_title p {
+		position: absolute;
+		color: #FBCC4D;
+		letter-spacing: 0.5rem;
+	}
+
+	.GA_filter_border {
+		border: 1px solid #6B4BFF;
+	}
+
+	.GA_filter p {
+		color: white;
+	}
+
+	.product_filter {
+		/* width: 20%; */
+		/* height: 50px; */
+		background: linear-gradient(to bottom, #4c4472 0%, #372c6b 82%, #ffffff 100%);
+		text-align: center;
+		letter-spacing: 0.5rem;
+		z-index: 99;
+	}
+
+	.product_filter_detail {
+		background: #1C162A;
+		/* width: 20%; */
+		color: white;
+	}
+
+	.product_radio_item {
+		display: inline-block;
+		position: relative;
+		padding: 0 6px;
+		margin: 10px 0 0;
+	}
+
+	.product_radio_item input[type='radio'] {
+		display: none;
+	}
+
+	.product_radio_item label {
+		color: white;
+		font-weight: normal;
+	}
+
+	.product_radio_item label:before {
+		content: " ";
+		display: inline-block;
+		position: relative;
+		top: 5px;
+		margin: 0 5px 0 0;
+		width: 20px;
+		height: 20px;
+		border-radius: 11px;
+		border: 1px solid #6B4BFF;
+		background-color: transparent;
+	}
+
+	.product_radio_item input[type=radio]:checked+label:after {
+		border-radius: 11px;
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 9px;
+		left: 10px;
+		content: " ";
+		display: block;
+		background: #FBCC4D;
+	}
+
+	.product_range_item input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		background: #2E22A4;
+	}
+
+	.product_range_item input[type=range]::-moz-range-thumb {
+		background: #6B4BFF;
+	}
+
+	.product_filter_delete {
+		color: #6B4BFF;
+	}
+
+	.product_filter_search {
+		color: white;
+		background: #6B4BFF;
+	}
+
+	.GA_product_title {
+		background: #7165A7;
+		width: 18%;
+		height: 35px;
+		margin-top: -8px;
+		position: relative;
+		clip-path: polygon(50% 25%, 100% 25%, 100% 43%, 87% 100%, 0 100%, 0% 25%);
+	}
+
+	/* .GA_product_title::after{
+      	content:"";
+      	border: 3px solid #fff;
+	  	width: 300px;
+      	position: absolute;
+	  	top:10px;
+	  	left:50px;
+	  	display: block;
+	  	z-index: 99;
+	} */
+	.GA_product_title p {
+		position: absolute;
+		color: #FBCC4D;
+		letter-spacing: 0.5rem;
+	}
+
+	.product_img_size {
+		width: 100%;
+		height: 125px;
+	}
+
+	.product_card_border {
+		border: 1px solid #fff;
+		background: #1B172E;
+	}
+
+	.product_card_bgc {
+		background-color: #0b0720;
+	}
+
+	.Banner{
+		max-width: 100%;
+		height:auto;
+	}
+</style>
+
+<body>
+	<header class="container-fluid p-0">
+		<div class="d-flex justify-content-between">
+			<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+			<div id="mobile_main_nav"
+				class="d-flex flex-column position-fixed vh-100 auto_bgc m-vw w-65 d-md-none d-xl-none align-items-center">
+				<a id="mabile_main_nav_btn" class="d-block align-self-start w-100 pt-4 pl-4 cursor_point"><i
+						class="footer_icon_size fas fa-times auto_textcolor"></i></a>
+				<div class="w-50 d-flex justify-content-center pb-3">
+					<a class="w-100 navbar-brand text-light mr-0 web_logo_mobile" href="#"><img
+							src="img/GA_mobileLogo.svg" alt="" class=""></a>
+				</div>
+				<ul class="navbar-nav align-items-center w-75">
+					<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+						<a class="d-block auto_textcolor py-2" href="#">產品資訊</a>
+					</li>
+					<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+						<a class="d-block auto_textcolor py-2" href="#">賽事新聞</a>
+					</li>
+					<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+						<a class="d-block auto_textcolor py-2" href="#">電競頻道</a>
+					</li>
+					<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+						<a class="d-block auto_textcolor py-2" href="#">會員中心</a>
+					</li>
+					<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+						<a class="d-block auto_textcolor py-2" href="#">關於我們</a>
+					</li>
+					<div class="d-flex align-items-center w-100 pt-4 justify-content-center">
+						<div class="mx-1 mt-2 text-center cursor_point">
+							<a class="w-25" href="">
+								<i class="footer_icon_size fab fa-facebook-square text-white"></i>
+							</a>
+							<p class="m-0 footer__icon_font_size footer_textcolor">社群分享</p>
+						</div>
+						<div class="mt-2 mx-1 d-flex flex-column align-items-center justify-content-start cursor_point">
+							<div class="w-32">
+								<a href="" class="d-block m-0 w-100 h-100 overflow-hidden pb-1 pt-0">
+									<img src="img/fox helper.svg" class="fit-img" alt="">
+								</a>
+							</div>
+							<p class="m-0 footer__icon_font_size footer_textcolor mb-1">選購助手</p>
+						</div>
+						<div class="mt-2 mx-1 text-center cursor_point">
+							<a href="">
+								<i class="footer_icon_size fas fa-question-circle text-white"></i>
+							</a>
+							<p class="m-0 footer__icon_font_size footer_textcolor">問題回報</p>
+						</div>
+					</div>
+				</ul>
+			</div>
+			<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+			<!-- ＾＾＾＾＾＾show in deck＾＾＾＾＾ -->
+			<nav id="decktop_main_nav"
+				class="decktop_main_nav navbar navbar-expand-lg navbar-expand-md navbar-light auto_bgc py-2 px-3 flex-xl-shrink-1 justify-content-md-center position-fixed w-100">
+				<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+				<div class="d-flex justify-content-between w-100 d-md-none d-xl-non">
+					<div class=" d-flex align-items-center">
+						<button class="btn mx-1 my-sm-0 border-0 auto_textcolor d-none"><i
+								class="fas fa-angle-double-left"></i></button>
+						<button id="main_nav_btn" class="navbar-toggler btn-light" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span><i class=" fas fa-bars text-light"></i></span>
+						</button>
+					</div>
+
+					<a id="moblie_Logo" class="moblie_Logo navbar-brand text-light mr-0 p-0" href="#"><img
+							src="img/GA_LOGO.svg" alt="" class=""></a>
+
+					<span class="px-1 d-none d-sm-none"></span>
+					<div id="mobile_search_shop" class="d-flex py-2 p-0 d-flex align-items-center list-unstyled">
+						<div class="nav-item w-100 text-center py-0">
+							<form class="form-inline my-2 my-lg-0 justify-content-end flex-nowrap">
+								<input id="mobile_SearchBar"
+									class=" mobile_SearchBar form-control bg-transparent text-white invisible d-none"
+									type="search" placeholder="Search" aria-label="Search">
+								<button id="mobile_search"
+									class="mobile_search btn mx-1 my-sm-0 border-0 auto_textcolor" type="button">
+									<i class="fas fa-search my-sm-0"></i>
+								</button>
+							</form>
+						</div>
+						<div class="nav-item text-center py-0">
+							<button class="btn  my-sm-0 border-0 auto_textcolor" type="submit">
+								<i class="fas fa-shopping-cart px-0"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+				<!-- ＾＾＾＾＾＾show in desk＾＾＾＾＾ -->
+				<div class="container nav_btn collapse navbar-collapse justify-content-between w-100 d-none d-sm-none"
+					id="navbarSupportedContent">
+					<a class="navbar-brand text-light mr-0 p-0 w-20" href="#"><img src="img/GA_LOGO.svg" alt=""
+							class=""></a>
+					<ul class="navbar-nav align-items-lg-center align-items-md-center">
+						<li class="nav-item active">
+							<a id="prduct_btn" class="deck_top_prduct_btn px-2 d-block auto_textcolor" href="#">產品</a>
+						</li>
+						<li class="nav-item dropdown position-relative">
+							<a id="news_btn" class="px-2 d-block auto_textcolor" href="#">新聞</a>
+							<div id="news_menu"
+								class="dropdown-menu mt-4 bg-dark text-center position-absolute deck_top_hover_position">
+								<a class="dropdown-item auto_textcolor" href="">資訊新聞</a>
+								<a class="dropdown-item auto_textcolor" href="">電競新聞</a>
+								<a class="dropdown-item auto_textcolor" href="">促銷活動</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown position-relative">
+							<a id="chanel_btn" class="px-2 d-block auto_textcolor" href="#">頻道</a>
+							<div id="chanel_menu"
+								class="dropdown-menu mt-4 bg-dark text-center position-absolute deck_top_hover_position">
+								<a class="dropdown-item auto_textcolor" href="">電競賽事</a>
+								<a class="dropdown-item auto_textcolor" href="">賽事回顧</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="px-2 d-block auto_textcolor" href="#">關於</a>
+						</li>
+						<li class="nav-item">
+							<button class="btn mx-1 my-sm-0 border-0 auto_textcolor" type="submit">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</li>
+						<li class="nav-item dropdown position-relative">
+							<button id="user_btn" class="btn mx- py-2 my-sm-0 border-0 auto_textcolor" type="button">
+								<i class="fas fa-user"></i>
+							</button>
+							<div id="user_menu"
+								class="dropdown-menu mt-3 bg-dark text-center position-absolute deck_top_hover_position plus w-75">
+								<a class="dropdown-item auto_textcolor" href="">會員中心</a>
+								<a class="dropdown-item auto_textcolor" href="">幫助中心</a>
+								<a class="dropdown-item auto_textcolor" href="">登出</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<div class="d-none d-md-block">
+								<div id="deck_top_search"
+									class="d-block w-100 form-inline my-2 my-lg-0 justify-content-end">
+									<button class="btn mx-1 my-sm-0 border-0 auto_textcolor" type="button">
+										<i class="fas fa-search my-2 my-sm-0"></i>
+									</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- ＾＾＾＾＾＾show in deck＾＾＾＾＾ -->
+			</nav>
+			<div id="deck_top_SearchBar" class="pt-2 deck_top_SearchBar d-none d-md-block position-fixed w-100 bg-dark">
+				<form action="" class="d-flex p-2">
+					<input class=" form-control text-white bg-dark" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-light my-sm-0 auto_textcolor" type="button">
+						<i class="fas fa-search my-2 my-sm-0"></i>
+					</button>
+				</form>
+			</div>
+			<div id="deck_top_prduct_hover"
+				class="position-fixed w-100 deck_top_prduct_hover d-none d-md-block product_bgc">
+
+				<div id="deck_top_prduct_list" class="container d-flex flex-nowrap">
+					<ul class="sectin-ul py-3">
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/CorsairLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>
+							</div>
+
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/RazerLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>
+							</div>
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/LogLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>
+							</div>
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/MsiLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="container-fluid p-0 mt-2">		
+		<div class="w-100 product_bigImg Banner ">
+			<!-- <img class="fit-image" src="img/News/2048958.jpg" alt=""> -->
+			<img class="fit-image" src="img/News/test.png" alt="">
+		</div>	
+	</div>
+	<div class="container-fluid p-0 mt-2">		
+		<div class="container mt-4 d-flex ">
+			<div class="GA_filter w-100 d-flex ">
+				<div class="w-20">
+					<div class="GA_filter_border">
+						<div class="product_filter">
+							<p class="py-2 m-0">
+								商品篩選
+							</p>
+						</div>
+						<div class="filter_keyboard">
+							<div class="product_filter">
+								<p class="py-2 m-0">
+									鍵盤分類
+								</p>
+							</div>
+							<div class="product_filter_detail d-flex flex-column px-4">
+								<div class="product_radio_item">
+									<input type="radio" id="keyboardAll" name="keyboardAll" value="ropt1">
+									<label for="keyboardAll">全部</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="keyboard1" name="keyboard1" value="ropt6">
+									<label for="keyboard1">機械式</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="keyboard2" name="keyboard2" value="ropt7">
+									<label for="keyboard2">電容式</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="keyboard3" name="keyboard3" value="ropt8">
+									<label for="keyboard3">薄膜式</label>
+								</div>
+							</div>
+						</div>
+						<div class="filter_axis">
+							<div class="product_filter">
+								<p class="py-2 m-0">
+									軸心
+								</p>
+							</div>
+							<div class="product_filter_detail d-flex flex-column px-4">
+								<div class="product_radio_item">
+									<input type="radio" id="axisAll" name="axisAll" value="ropt1">
+									<label for="axisAll">全部</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="axis1" name="axis1" value="ropt1">
+									<label for="axis1">紅軸</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="axis2" name="axis2" value="ropt2">
+									<label for="axis2">青軸</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="axis3" name="axis3" value="ropt3">
+									<label for="axis3">茶軸</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="axis4" name="axis4" value="ropt4">
+									<label for="axis4">黑軸</label>
+								</div>
+							</div>
+						</div>
+						<div class="filter_less">
+							<div class="product_filter">
+								<p class="py-2 m-0">
+									有線／無線
+								</p>
+							</div>
+							<div class="product_filter_detail d-flex flex-column px-4">
+								<div class="product_radio_item">
+									<input type="radio" id="less1" name="less1" value="ropt1">
+									<label for="less1">有線</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="less2" name="less2" value="ropt1">
+									<label for="less2">無線</label>
+								</div>
+							</div>
+						</div>
+						<div class="filter_RGB">
+							<div class="product_filter">
+								<p class="py-2 m-0">
+									RGB
+								</p>
+							</div>
+							<div class="product_filter_detail d-flex flex-column px-4">
+								<div class="product_radio_item">
+									<input type="radio" id="RGB1" name="RGB1" value="ropt1">
+									<label for="RGB1">有</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="RGB2" name="RGB2" value="ropt1">
+									<label for="RGB2">無</label>
+								</div>
+							</div>
+						</div>
+						<div class="filter_game">
+							<div class="product_filter">
+								<p class="py-2 m-0">
+									遊戲推薦使用
+								</p>
+							</div>
+							<div class="product_filter_detail d-flex flex-column px-4">
+								<div class="product_radio_item">
+									<input type="radio" id="gameAll" name="gameAll" value="ropt1">
+									<label for="gameAll">全部</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="game1" name="game1" value="ropt2">
+									<label for="game1">英雄聯盟</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="game2" name="game2" value="ropt3">
+									<label for="game2">鬥陣特工</label>
+								</div>
+								<div class="product_radio_item">
+									<input type="radio" id="game3" name="game3" value="ropt4">
+									<label for="game3">絕地求生</label>
+								</div>
+							</div>
+						</div>
+						<div class="filter_price">
+							<div class="product_filter">
+								<p class="py-2 m-0">
+									價格
+								</p>
+							</div>
+							<div class="product_filter_detail d-flex flex-column px-4 py-5">
+								<div class="product_range_item">
+									<input type="range" class="custom-range" min="0" max="5" id="customRange2">
+									<div class="d-flex justify-content-between">
+										<label for="customRange2">$0</label>
+										<label for="customRange2">$8000</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-100 d-flex py-3">
+						<button class="w-50 d-block btn-light product_filter_delete">
+							取消
+						</button>
+						<button class="w-50 d-block btn-light product_filter_search">
+							搜尋
+						</button>
+					</div>
+				</div>
+				<div class="d-flex w-80 flex-column pl-5">
+					<div class="GA_product_title px-2">
+						<!-- <div class="GA_title_line"></div> -->
+						<p class="py-2 px-4">
+							鍵盤
+						</p>
+					</div>
+
+					<div class="product_MSI">
+						<!--一行產品-->
+						<div class="d-flex justify-content-center text-white pb-1 pt-3">
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p class="middle_text">產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white ">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--一行產品-->
+						<div class="d-flex justify-content-center text-white pb-1 pt-3">
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p class="middle_text">產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--一行產品-->
+						<div class="d-flex justify-content-center text-white pb-1 pt-3">
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p class="middle_text">產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!--一格產品-->
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="w-30 d-flex flex-column product_card_border mx-2">
+								<div class="align-self-end p-2">
+									<a class="cursor_point"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="product_img_size cursor_point">
+									<!-- <img src="" alt=""> -->
+								</div>
+								<div class="py-2">
+									<p>產品名稱</p>
+									產品分類/產品分類/產品分類
+								</div>
+								<div class="d-flex justify-content-around align-baseline py-3">
+									<div class="w-50">
+										<p>NT$3,500</p>
+									</div>
+									<div class="">
+										<button class="d-block border-light btn text-white">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--一行產品-->
+					</div>
+
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+
+	<footer class="auto_bgc text-center d-none d-md-block p-0 w-100">
+		<div class="d-flex justify-content-center align-items-center pt-2 container">
+			<a href="" class="d-block w-20 mx-2">
+				<img src="img/GA_LOGO.svg" alt="">
+			</a>
+			<div class="d-flex flex-column">
+				<div class="d-flex mx-2 my-1 mx-2">
+					<a href="" class="mx-2 auto_textcolor footer_font_size">產品<span>｜Product</span></a>
+					<a href="" class="mx-2 auto_textcolor footer_font_size">新聞<span>｜News</span></a>
+				</div>
+				<div class="d-flex mx-2 my-1 mx-2">
+					<a href="" class="mx-2 auto_textcolor footer_font_size ">頻道<span>｜Channel</span></a>
+					<a href="" class="mx-2 auto_textcolor footer_font_size">關於<span>｜About</span></a>
+				</div>
+			</div>
+			<div class="d-flex align-items-center mx-2">
+				<div class="mx-1 mt-2 cursor_point">
+					<a class="w-25" href="">
+						<i class="footer_icon_size fab fa-facebook-square text-white"></i>
+					</a>
+					<p class="m-0 footer__icon_font_size footer_textcolor">社群分享</p>
+				</div>
+				<div class="mt-1 mx-1 d-flex flex-column align-items-center justify-content-start cursor_point">
+					<div class="w-32 mt-1">
+						<a href="" class="d-block m-0 w-100 h-100 overflow-hidden pb-1 pt-0">
+							<img src="img/fox helper.svg" class="fit-img" alt="">
+						</a>
+					</div>
+					<p class="m-0 footer__icon_font_size footer_textcolor mb-1">小幫手</p>
+				</div>
+				<div class="mt-2 mx-1 cursor_point">
+					<a href=""><i class="footer_icon_size fas fa-question-circle text-white"></i></a>
+					<p class="m-0 footer__icon_font_size footer_textcolor">問題回報</p>
+				</div>
+			</div>
+		</div>
+		<div class="text-white pb-4 pt-2 footer_font_size">
+			Copyright @ Gaming Area. All rights reserved
+		</div>
+	</footer>
+	<footer class="container-fluid auto_bgc text-center d-md-none d-xl-none ">
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<a href="" class="d-block w-25 pt-2">
+				<img src="img/GA_mobileLogo.svg" alt="">
+			</a>
+			<div class="text-white pb-4 pt-2 footer_font_size">
+				Copyright @ Gaming Area. All rights reserved
+			</div>
+		</div>
+	</footer>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/vegas/vegas.min.js"></script>
+	<script src="bootstrap-4.3.1/dist/js/bootstrap.js"></script>
+	<script src="js/lightslider/js/lightslider.js"></script>
+	<script>
+		$("#vegas_bg").vegas({
+			slides: [
+				{
+					video: {
+						src: [
+							'video/We Are Logitech G.mp4',
+							// '/videos/video.webm',
+							// '/videos/video.ogv'
+						],
+						loop: true,
+						mute: true
+					}
+				}
+			]
+		});
+		//＾＾＾＾＾＾＾＾header-vegas ＾＾＾＾＾＾＾
+		var LastScrollTop;
+		$(window).scroll(function () {
+			let PageHeight = $("body").height()
+			let WindowHeight = $(window).height()
+			let RealHeight = (PageHeight - WindowHeight)
+			let ScrollTop = $(this).scrollTop()
+			let WindowPersent = (ScrollTop / RealHeight * 100)
+			WindowPersent = Math.round(WindowPersent) + "%"
+
+			if (LastScrollTop < ScrollTop) {
+				$("#decktop_main_nav").addClass('active')
+				$("#deck_top_prduct_hover").addClass('active')
+				$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+			} else {
+				$("#decktop_main_nav").removeClass('active')
+				$("#deck_top_prduct_hover").removeClass('active')
+			}
+
+			LastScrollTop = ScrollTop
+		})
+		//＾＾＾＾＾＾＾＾scroll funtion ＾＾＾＾＾＾＾
+
+
+		$("#main_nav_btn").click(function () {
+			$("#decktop_main_nav").addClass('active')
+			$("#mobile_main_nav").toggleClass('slide_in_right');
+			/* Act on the event */
+		});
+		$("#mabile_main_nav_btn").click(function () {
+			$("#decktop_main_nav").removeClass('active')
+			$("#mobile_main_nav").toggleClass('slide_in_right');
+			/* Act on the event */
+		});
+		//＾＾＾＾＾＾＾＾deck_top_nav-click funtion＾＾＾＾＾＾＾
+
+		$("#deck_top_search").click(function () {
+			$("#deck_top_SearchBar").toggleClass('active');
+		});
+
+		$("#mobile_search").click(function () {
+			$("#moblie_Logo").toggleClass('d-none')
+			$("#mobile_SearchBar").toggleClass('d-none')
+			$("#mobile_SearchBar").toggleClass('invisible')
+			$("#mobile_search_shop").toggleClass('w-100')
+			$("#mobile_SearchBar").toggleClass('flex-grow-1')
+		})
+
+
+
+		//＾＾＾＾＾＾＾＾search-bar-vissble click funtion＾＾＾＾＾＾＾
+		$("#news_btn").on('mouseenter', function () {
+			$("#news_menu").addClass('show')
+
+			$("#chanel_menu").removeClass('show')
+			$("#user_menu").removeClass('show')
+			$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+			/* Act on the event */
+		});
+		$("#news_menu").mouseleave(function () {
+			$(this).removeClass('show')
+			$("#user_menu").removeClass('show')
+			$("#chanel_menu").removeClass('show')
+		});
+		//＾＾＾＾＾＾＾＾新聞＾＾＾＾＾＾＾
+
+		$("#chanel_btn").on('mouseenter', function () {
+			$("#chanel_menu").addClass('show')
+
+			$("#news_menu").removeClass('show')
+			$("#user_menu").removeClass('show')
+			$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+			/* Act on the event */
+		});
+		$("#chanel_menu").mouseleave(function () {
+			$(this).removeClass('show')
+			$("#user_menu").removeClass('show')
+			$("#news_menu").removeClass('show')
+		});
+		//＾＾＾＾＾＾＾＾頻道＾＾＾＾＾＾＾
+		$("#user_btn").on('mouseenter', function () {
+			$("#user_menu").addClass('show')
+
+			$("#news_menu").removeClass('show')
+			$("#chanel_menu").removeClass('show')
+			$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+			/* Act on the event */
+		});
+		$("#user_menu").mouseleave(function () {
+			$(this).removeClass('show')
+			$("#news_menu").removeClass('show')
+			$("#chanel_menu").removeClass('show')
+		});
+		//＾＾＾＾＾＾＾＾會員＾＾＾＾＾＾＾
+		$("#decktop_main_nav").mouseenter(function () {
+			$("#news_menu").removeClass('show')
+			$("#chanel_menu").removeClass('show')
+			$("#user_menu").removeClass('show')
+		})
+		//＾＾＾＾＾＾＾＾NAV機制＾＾＾＾＾＾＾
+
+		$("#prduct_btn").mouseenter(function () {
+			$("#news_menu").removeClass('show')
+			$("#deck_top_prduct_hover").css("transform", "translateY(60px)")
+			$("#deck_top_prduct_hover").addClass('button-glow')
+			$("#deck_top_SearchBar").removeClass('active')
+
+		})
+		$("#deck_top_prduct_list>ul").mouseleave(function () {
+			$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+			$("#deck_top_prduct_hover").removeClass('button-glow')
+		});
+		//＾＾＾＾＾＾＾＾drck top nav hover＾＾＾＾＾＾＾
+		var section = $(".sectin-ul li")
+		function toggleAccordion() {
+			section.removeClass('active');
+			section.find('.auto_textcolor').addClass('d-none')
+			section.find('.auto_textcolor').removeClass('d-block')
+			$(this).addClass('active');
+			$(this).find('.auto_textcolor').removeClass('d-none')
+			$(this).find('.auto_textcolor').addClass('d-block')
+
+		}
+
+		section.on('mouseenter', toggleAccordion);
+
+
+// 	$("#news_menu").on('mouseenter mouseleave','.dropdown',function(e){
+//   if (e.type === 'mouseenter')$("#news_menu").addClass('show');
+//   setTimeout(function(){
+//     $("#news_menu").toggleClass('show', $("#news_menu").is(':hover'));
+//     $('[data-toggle="dropdown"]', $("#news_menu")).attr('aria-expanded',$("#news_menu").is(':hover'));
+//   },500);
+// });
+// 	$("#chanel_menu").on('mouseenter mouseleave','.dropdown',function(e){
+//   if (e.type === 'mouseenter')$("#chanel_menu").addClass('show');
+//   setTimeout(function(){
+//     $("#chanel_menu").toggleClass('show', $("#chanel_menu").is(':hover'));
+//     $('[data-toggle="dropdown"]', $("#chanel_menu")).attr('aria-expanded',$("#chanel_menu").is(':hover'));
+//   },500);
+// });
+
+
+
+	</script>
+</body>
+
+</html>

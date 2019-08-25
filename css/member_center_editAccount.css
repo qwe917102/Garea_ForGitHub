@@ -1,0 +1,108 @@
+.member_center_editAccount_name {
+  max-width: 1140px;
+}
+
+.member_center_editAccount_name h4,
+.member_center_editAccount_name h5 {
+  color: #fbcc4d;
+}
+
+.member_center_editAccount_name .member_nickname_title a {
+  background: none;
+  color: #ffffff;
+}
+
+.member_center_editAccount_name .member_nickname_title a:hover {
+  background: none;
+  color: #ffffff;
+}
+
+.member_center_editAccount_name .member_nickname_title a.member_logout:hover {
+  color: #fbcc4d;
+}
+
+.member_center_editAccount_name h4 .member_nickname {
+  width: 185px;
+  text-align: left;
+}
+
+.member_center_editAccount_name h5 .member_nickname {
+  /* width: 140px; */
+  text-align: center;
+}
+
+.member_center_editAccount_tabs {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.member_center_editAccount_tab_button {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member_center_editAccount_tab_button li {
+  display: table-cell;
+  width: 25%;
+}
+
+.member_center_editAccount_tab_button li a {
+  display: block;
+  padding: 0.5em;
+  background: #413e53;
+  text-align: center;
+  color: #ad9aff;
+  text-decoration: none;
+  height: 42px;
+  transition: 0.3s;
+}
+
+.member_center_editAccount_tab_button li:not(:first-child) a {
+  border-left: none;
+}
+
+.member_center_editAccount_tab_button li a:hover,
+.member_center_editAccount_tab_button .is-active a {
+  background: #7165a7;
+  color: #ffffff;
+}
+
+.member_center_editAccount_tab_contents {
+  padding: 0.5em 2em 1em;
+  color: #ffffff;
+  background: #7165a7;
+  min-height: 650px;
+}
+
+.member_center_tab01 .col-form-label {
+  color: #cccccc;
+  /* color: rgb(212, 209, 224); */
+}
+
+.member_center_tab01 .form input,
+.member_center_tab01 .form textarea {
+  border-radius: 0;
+}
+.member_center_tab01 small {
+  color: #ffcc4d;
+}
+
+.member_center_tab01 .btn {
+  background: #412f8f;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  width: 266px;
+}
+
+.member_center_tab01 .btn:hover {
+  background: #413e53;
+  border: 1px solid #cccccc;
+}
+
+.member_center_tabs .row .accordion .card .collapse_textcolor {
+  color: #000000;
+}

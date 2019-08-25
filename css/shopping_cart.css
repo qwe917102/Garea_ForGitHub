@@ -1,0 +1,38 @@
+.bg-container {
+  min-height: 750px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cart_border {
+  border: 1px solid #fff;
+}
+.cart_border_top {
+  border: 1px solid #fff;
+  border-top: 0;
+}
+.cart_border_top_B {
+  border-top: 1px solid #222;
+}
+.quantity_inside_val {
+  width: 35px;
+  text-align: center;
+}
+.cart_product_img {
+  max-width: 200px;
+  height: 180px;
+  overflow: hidden;
+}
+.cart_product_massage {
+  width: 400px;
+}
+.cart_product_bgc {
+  background-color: #413e53;
+  min-height: 300px;
+}
+.cart_cancel_bgc {
+  background-color: #412f8f;
+}
+.cart_product_bgc_2 {
+  background-color: #7165a7;
+}

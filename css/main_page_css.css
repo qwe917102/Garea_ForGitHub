@@ -1,0 +1,476 @@
+body {
+  background: #2a2057;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #fff;
+}
+.auto_bgc {
+  background-color: #211751;
+}
+.auto_text_green {
+  color: #a8ff8a;
+}
+.auto_text_yellow {
+  color: #ffcd1d;
+}
+.product_bgc {
+  background-color: rgba(33, 23, 81, 0.7);
+}
+.main_black_bgc {
+  background-color: rgba(27, 23, 46, 0.6);
+}
+.auto_textcolor {
+  color: #fff;
+  letter-spacing: 3.5px;
+}
+.auto_spacing {
+  letter-spacing: 3.5px;
+}
+.shopping_step_textcolor {
+  text-decoration: none;
+  color: #fff !important;
+}.shopping_step_textcolor:hover {
+  text-decoration: none;
+  color: #ffcd1d !important;
+}
+.auto_textcolor:hover {
+  text-decoration: none;
+  color: #ffcd1d;
+}
+.nav-item {
+  text-align: right;
+}
+.cart_q {
+  background: #ffcd1d;
+  top: 8px !important;
+  left: 20px;
+  color: black;
+  border-radius: 100%;
+}
+.cart_q_m {
+  background: #ffcd1d;
+  top: 0px;
+  left: 20px;
+  color: black;
+  border-radius: 100%;
+}
+.login_nickname:hover {
+  background: #211751;
+}
+.vegas_bg {
+  background-position: top center;
+  background-size: cover;
+  z-index: -1;
+}
+.bg_dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bg_dark2 {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+.moblie_Logo {
+  width: 150px;
+  height: 60px;
+  transition: 0.3s;
+}
+.web_logo_mobile {
+  width: 300px;
+  height: auto;
+}
+header nav {
+  transition: 0.5s;
+  z-index: 100;
+}
+header .mobile_main_nav {
+  z-index: 100;
+}
+nav.active {
+  opacity: 0;
+  transform: translateY(-130px);
+}
+.deck_top_prduct_hover {
+  transform: translateY(-130px);
+  transition: 0.5s;
+  height: 150px;
+  z-index: 99;
+  background-color: rgba(33, 23, 81, 0.5);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 26% 87%, 23% 97%, 0 97%);
+}
+.deck_top_prduct_hover.active {
+  transform: translateY(-130px);
+  opacity: 0;
+}
+.deck_top_prduct_hover_back {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 26% 85%, 23% 95%, 0 95%);
+  background-color: rgba(33, 23, 81, 0.5);
+  transition: 0.5s;
+  height: 150px;
+}
+.deck_top_SearchBar {
+  transform: translateY(-130px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 99;
+}
+.deck_top_SearchBar.active {
+  transform: translateY(68px);
+  opacity: 1;
+  transition: 0.5s;
+}
+.input_search_btn {
+  position: absolute;
+  top: 14.5%;
+  right: 0.5%;
+  border-left: 1px solid #fff;
+}
+.decktop_main_nav {
+  z-index: 100;
+}
+.decktop_main_nav .nav_btn ul {
+  justify-content: space-between;
+}
+.m-vw {
+  z-index: 99;
+  transform: translateX(-100vw);
+  transition: 0.5s;
+}
+.deck_top_hover_position {
+  left: -70%;
+}
+.deck_top_hover_position.plus {
+  left: -135%;
+}
+.slide_in_right {
+  transform: translateX(0vw);
+}
+.w-65 {
+  width: 65vw;
+}
+.w-10 {
+  width: 60px;
+}
+.w-0 {
+  width: 0vw;
+}
+.bordeR_bt_solid_1px_white {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.nav_degBox {
+  position: absolute;
+  top: 100%;
+  height: 20px;
+  width: 20%;
+  border-top: 20px solid rgba(33, 23, 81, 0.7);
+  border-right: 20px solid transparent;
+}
+@keyframes glowing {
+  /* 0% { filter: drop-shadow(0 140px -20px #0ff);}
+	40% { filter: drop-shadow(0 110px 40px #0ff);}
+  	60% { filter: drop-shadow(0 110px 40px #0ff);}
+  	100% { filter: drop-shadow(0 140px 120px #0ff);}
+ */
+  0% {
+    filter: drop-shadow(0 140px -20px #f0f);
+  }
+  15% {
+    filter: drop-shadow(0 110px 40px #0ff);
+  }
+  30% {
+    filter: drop-shadow(0 110px 80px #f0f);
+  }
+  45% {
+    filter: drop-shadow(0 140px 120px #0ff);
+  }
+  60% {
+    filter: drop-shadow(0 140px 120px #f0f);
+  }
+  75% {
+    filter: drop-shadow(0 110px 80px #0ff);
+  }
+  90% {
+    filter: drop-shadow(0 110px 40px #f0f);
+  }
+  100% {
+    filter: drop-shadow(0 140px -20px #f0f);
+  }
+}
+.button-glow {
+  animation: glowing 3000ms /* 500ms */ infinite;
+}
+.sectin-ul .accordion_item:hover #corsair .st2 {
+  fill: #ffcd1d;
+}
+/* --------section slider--------- */
+
+.sectin-ul {
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.sectin-ul li {
+  display: flex;
+  /* flex: 1; */
+  transition: all 0.5s ease;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+.sectin-ul li.active {
+  /* flex: 5; */
+  cursor: default;
+}
+.sectin-ul li.active .section-content {
+  flex: 1;
+  opacity: 1;
+  transform: scaleX(1);
+}
+.sectin-ul li .section-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s 0.1s ease-out;
+}
+/* .sectin-ul li .section-content a{
+	display: none
+} */
+
+/* .sectin-ul .sectin-title{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	width: 15vw;
+} */
+/* --------slider plugin----------- */
+.text_color {
+  color: #ffcd1d;
+}
+
+/* -----area2---- */
+.slogan {
+  position: absolute;
+  bottom: 0;
+}
+.fit-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.glow-border {
+  box-shadow: inset 0 0 0px #fff, /* inner white */ inset 10px 0 60px #f0f,
+    /* inner left magenta short */ inset -10px 0 60px#0ff,
+    /* inner right cyan short */ inset 10px 0 10px #f0f,
+    /* inner left magenta broad */ inset -10px 0 10px #0ff,
+    /* inner right cyan broad */ 0 0 0px #fff, /* outer white */ 0px 0 20px #f0f,
+    /* outer left magenta */ 0px 0 20px #0ff; /* outer right cyan */
+}
+/* -----footer----- */
+.vh-25 {
+  height: 25vh;
+}
+.footer_font_size {
+  font-size: 0.85em;
+}
+.footer_icon_size {
+  font-size: 1.25em;
+}
+.footer__icon_font_size {
+  font-size: 0.25em;
+}
+.w-32 {
+  width: 50%;
+}
+.w-20 {
+  width: 20%;
+}
+.footer_textcolor {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+.footer_textcolor:hover {
+  text-decoration: none;
+  color: #ffcd1d;
+}
+.cursor_point {
+  cursor: pointer;
+}
+.cursor_default {
+  cursor: default;
+}
+/* --------mobile list------- */
+.mobile_list_bg_type1 {
+  background-color: #4c38a2;
+  color: #fff;
+}
+.mobile_list_bg_type2 {
+  background-color: #ad9aff;
+  color: #412f8f;
+}
+/* ------product----- */
+.product_img_size {
+  width: 100%;
+  height: 125px;
+  background-color: #ccc;
+}
+.product_card_border {
+  border: 1px solid #fff;
+  border-radius: 1%;
+}
+.product_card_bgc {
+  background-color: #0b0720;
+}
+/* -------text size----- */
+.big_text {
+  font-size: 1.4em;
+}
+.big_text_2 {
+  font-size: 1.3em;
+}
+/* //NAV與強調用標 */
+.middle_text {
+  font-size: 1.25em;
+}
+/* //頁面黃字標 */
+.middle_text_2 {
+  font-size: 1em;
+}
+.small_text {
+  font-size: 0.75em;
+  letter-spacing: 0.5px;
+}
+.h-0 {
+  height: 0;
+}
+
+/* ------------------------- */
+.main_TV_wall {
+  border-radius: 3px;
+  height: 25vh;
+  /* background-color: #FFF; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: inherit;
+  background-position: center top;
+}
+.main_TV_wall_box:hover .main_TV_wall {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
+}
+.main_TV_wall_box:hover .bg_dark2 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.main_TV_wall_img6 {
+  background-image: url("../img/Overw_gental.jpg");
+}
+.main_TV_wall_img5 {
+  background-image: url("../img/lol-events-skip-uk.jpg");
+}
+.main_TV_wall_img4 {
+  background-image: url("../img/pubg2.jpg"); 
+  background-position: right top;
+}
+.main_TV_wall_img3 {
+  background-image: url("../img/overwatch01.png");
+}
+.main_TV_wall_img2 {
+  background-image: url("../img/maxresdefault.jpg");
+}
+.main_TV_wall_img1 {
+  background-image: url("../img/vei.png");
+}
+.up_down {
+  transition: 0.5s;
+}
+.main_page_about_esport {
+  background-position: center top;
+}
+.about_big_btn {
+  z-index: 99;
+}
+.main_ch_btn {
+  border-radius: 2px;
+  border: 1px solid #fff;
+}
+.vegas_in_textBtn {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.parallax {
+  /*視差*/
+  background-image: url("../img/main_galaxy.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main_product_card_img_size {
+  height: 200px;
+}
+.parallax_card {
+  /*視差*/
+  background-image: url("../img/Wallpapers-Metal-023.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.up_down_rotate {
+  transform: rotate(180deg);
+}
+/* footer{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom:0;
+	z-index: 99;
+  transform: translateY(200px);
+  transition: .5s;
+}
+footer.active{
+  transform: translateY(200px);
+}
+ */
+
+/*  Back To Top  */
+#fixedTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 8px 13px;
+  color: #fff;
+  text-align: center;
+  background: slateblue;
+  z-index: 99;
+  display: none;
+}
+/* -------------- */
+
+.FW_broder_bottom{
+  border-bottom: 1px solid #fff
+}
+.FW_img_border_bg{
+  border: 1px solid #a8ff8a;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.more_text_none6{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+.more_text_none4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,15 @@
+<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.54 12.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>無框放大鏡</title>
+  <g>
+    <path d="M15.1,12.21,8.28,7.87a.44.44,0,0,1-.13-.62h0a.45.45,0,0,1,.62-.14l6.81,4.35a.44.44,0,0,1,.14.61h0A.45.45,0,0,1,15.1,12.21Z" transform="translate(-0.25 -0.25)"/>
+    <ellipse cx="4.72" cy="4.71" rx="4.72" ry="4.71"/>
+    <ellipse class="cls-1" cx="4.72" cy="4.71" rx="3.82" ry="3.81"/>
+  </g>
+</svg>

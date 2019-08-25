@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<title>Member_Center_test01</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="js/vegas/vegas.min.css">
+<link rel="stylesheet" href="fontawesome/css/all.css">
+<link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="js/lightslider/css/lightslider.css">
+<script src="js/jquery-3.4.1.js"></script>
+
+</head>
+<style>
+	body{
+		background: #2A2057;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	.auto_bgc{
+		background-color: #211751;
+	}
+	.product_bgc{
+		background-color: rgba(33, 23, 81, .7);
+	}
+	.auto_textcolor {
+		color: #fff;
+		letter-spacing: 3.5px
+	}
+	.auto_textcolor:hover {
+		text-decoration: none;
+		color: #FFCD1D;
+	}
+
+	/* 公版container */
+	.GA_container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.nav-item{
+		text-align: right;
+	}
+	.vegas_bg{
+		background-position: top center;
+		background-size: cover;
+		z-index: -1;
+	}
+	.bg_dark{
+		background-color: rgba(0, 0, 0, .3);
+	}
+	.moblie_Logo {
+		width: 150px;
+		height: 60px;
+	}
+	.web_logo_mobile{
+		width: 300px;
+		height: auto;
+	}
+	header nav{
+		transition: .5s;
+		z-index: 99;
+	}
+	nav.active{
+		opacity: 0;
+		transform: translateY(-130px);
+	}
+	.deck_top_prduct_hover{
+		transform: translateY(-130px);
+		transition: .5s;
+	}
+	.deck_top_prduct_hover.active{
+		transform: translateY(-130px);
+		opacity: 0;
+	}
+	.deck_top_SearchBar{
+		transform: translateY(-130px);
+		opacity: 0;
+		transition: .5s;
+	}
+	.deck_top_SearchBar.active{
+		transform: translateY(70px);
+		opacity: 1;
+		transition: .5s;
+	}
+	.decktop_main_nav{
+		z-index: 90
+	}
+	.decktop_main_nav .nav_btn ul {
+		justify-content: space-between
+	}
+	.m-vw{
+		z-index: 99;
+		transform: translateX(-100vw);
+		transition: .5s;
+	}
+	.deck_top_hover_position{
+		left: -95%;
+	}
+	.deck_top_hover_position.plus{
+		left: -150%;
+	}
+	.slide_in_right{
+		transform: translateX(0vw);
+	}
+	.w-65{
+		width: 65vw;
+	}
+	.w-10{
+		width: 60px;
+	}
+	.w-20{
+		max-width: 180px;
+		height: auto;
+	}
+	.w-0{
+		width: 0vw;
+	}
+	.bordeR_bt_solid_1px_white{
+		border-bottom:1px solid rgba(255, 255, 255, .25);
+	}
+/* 	.about_big_btn::after{
+	content: "";
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 20%;
+    border-top: 20px solid #f6f6f6;
+    border-right: 20px solid transparent;
+	} */
+	@keyframes glowing {
+  0% { box-shadow: 0 0 -20px #CF2Dff; }
+  40% { box-shadow: 0 0 40px #CF2Dff; }
+  60% { box-shadow: 0 0 40px #CF2Dff; }
+  100% { box-shadow: 0 0 -20px #CF2Dff; }
+}
+.button-glow {
+  animation: glowing 3000ms 500ms infinite;
+}
+.sectin-ul .accordion_item:hover #corsair .st2{
+	fill: #FFCD1D;
+}
+/* --------section slider--------- */
+
+.sectin-ul{
+	box-sizing: border-box;
+	display: flex;
+	overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.sectin-ul li{
+	display: flex;
+	/* flex: 1; */
+	transition: all .5s ease;
+	align-items: center;
+	text-align: center;
+	padding: 5px;
+}
+.sectin-ul li.active{
+	/* flex: 5; */
+	cursor: default;
+}
+.sectin-ul li.active .section-content{
+	flex: 1;
+	opacity: 1;
+	transform: scaleX(1);
+}
+.sectin-ul li .section-content{
+	display: flex;
+	flex: 1;
+	align-items: center;
+	opacity: 0;
+	transition: all 1s .1s ease-out;
+}
+/* .sectin-ul li .section-content a{
+	display: none
+} */
+
+/* .sectin-ul .sectin-title{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	width: 15vw;
+} */
+/* --------slider plugin----------- */
+.text_color{
+	color: #FFCD1D;
+}
+
+
+	/* -----area2---- */
+	.slogan{
+		position: absolute;
+		bottom: 0;
+	}
+	.fit-image{
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	.glow-border{
+		box-shadow:
+        inset 0 0 0px #fff,      /* inner white */
+        inset 10px 0 10px #f0f,   /* inner left magenta short */
+        inset -10px 0 10px #0ff ,  /* inner right cyan short */
+        inset 10px 0 10px #f0f,  /* inner left magenta broad */
+        inset -10px 0 10px #0ff, /* inner right cyan broad */
+        0 0 0px #fff,            /* outer white */
+        0px 0 20px #f0f,        /* outer left magenta */
+        0px 0 20px #0ff;         /* outer right cyan */
+	}
+	/* -----footer----- */
+	.vh-25{
+		height: 25vh;
+	}
+	.footer_font_size{
+		font-size: .85em;
+	}
+	.footer_icon_size{
+		font-size:1.25em;
+	}
+	.footer__icon_font_size{
+		font-size: .25em;
+	}
+	.w-32{
+		width: 50%;
+	}
+	.w-20{
+		width: 20%;
+	}
+	.footer_textcolor {
+		color: #fff;
+		letter-spacing: 1.5px
+	}
+	.footer_textcolor:hover {
+		text-decoration: none;
+		color: #FFCD1D;
+	}
+	.cursor_point{
+		cursor: pointer
+	}
+
+   /* Container內容 */
+   .tabs {
+		max-width: 1140px;
+		margin: 0 auto;
+   }
+   .tab_button {
+		display:table;
+		table-layout: fixed;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+   }
+   .tab_button li {
+		display:table-cell;
+		width: 25%;
+   }
+   .tab_button li a {
+		display: block;
+		padding: .5em;
+		background: #413E53;
+		/* border-bottom: .8px solid #413E53; */
+		text-align: center;
+		color: #AD9AFF;
+		text-decoration: none;
+		height: 45px;
+   }
+   .tab_button li:not(:first-child) a {
+   	border-left: none;
+   }
+   .tab_button li a:hover, .tab_button .is-active a {
+		background: #7165A7;
+		color: #ffffff;
+   }
+   .tab_contents {
+		padding: .5em 2em 1em;
+		color: #ffffff;
+		background: #7165A7;
+		min-height: 650px;
+   }
+	.tab_contents small {
+		color: #FFCC4D;
+	}
+	.tab01 button {
+		background: #412F8F;
+		border: 1px solid #cccccc;
+	}
+	.tab01 button:hover {
+		background: #413E53;
+		border: 1px solid #cccccc;
+	}
+	.tab02 .row {
+		margin: 0 auto;
+	}
+	.tab02 .card {
+		background: #413E53;
+	}
+	.tab02 .card_a {
+		min-width: 180px;
+		min-height: 200px;
+		margin: 20px auto;
+		background: #ffffff;
+		
+	}
+	.tab02 .card_a img {
+		width: 100%;
+		object-fit: cover;
+	}
+	
+	.GAFOX{
+		/* text-align: center; */
+	}
+	.GAFOX_text{
+		color: white;
+		width: 50%;
+		text-align: center;
+	}
+	.start_game{
+		border-radius: 0px;
+		background: #412F8F;	
+	}
+	.start_game:hover{
+		box-shadow: #A8FF8A;
+	}
+	.question1{
+		background: #9C8EDE;
+		height: 100px;
+		color:white;
+		position: relative;
+	}
+	.question1::before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 25px 0 20px 50px;
+		border-color: transparent transparent transparent #9C8EDE;
+		position: absolute;
+		right: -50px;
+ 		top: 53px;
+	}
+	.answer{
+		background:#ccc;
+		border: 1px solid white;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		width: 200px;
+		height: 200px;
+	}
+</style>
+<body>
+<header class="container-fluid p-0">
+	<div class="d-flex justify-content-between">
+			<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+		<div id="mobile_main_nav" class="d-flex flex-column position-fixed vh-100 auto_bgc m-vw w-65 d-md-none d-xl-none align-items-center">
+			<a id="mabile_main_nav_btn" class="d-block align-self-start w-100 pt-4 pl-4 cursor_point"><i class="footer_icon_size fas fa-times auto_textcolor"></i></a>
+			<div class="w-50 d-flex justify-content-center pb-3">
+				<a class="w-100 navbar-brand text-light mr-0 web_logo_mobile" href="#"><img src="img/GA_mobileLogo.svg" alt="" class=""></a>
+			</div>
+			<ul class="navbar-nav align-items-center w-75">
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">產品資訊</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">賽事新聞</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">電競頻道</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">會員中心</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">關於我們</a>
+				</li>
+				<div class="d-flex align-items-center w-100 pt-4 justify-content-center">
+					<div class="mx-1 mt-2 text-center cursor_point">
+						<a class="w-25" href="">
+							<i class="footer_icon_size fab fa-facebook-square text-white"></i>
+						</a>
+						<p class="m-0 footer__icon_font_size footer_textcolor">社群分享</p>
+					</div>
+					<div class="mt-2 mx-1 d-flex flex-column align-items-center justify-content-start cursor_point">
+						<div class="w-32">
+							<a href="" class="d-block m-0 w-100 h-100 overflow-hidden pb-1 pt-0">
+								<img src="img/fox helper.svg" class="fit-img" alt="">
+							</a>
+						</div>
+						<p class="m-0 footer__icon_font_size footer_textcolor mb-1">選購助手</p>
+					</div>
+					<div class="mt-2 mx-1 text-center cursor_point">
+						<a href="">
+							<i class="footer_icon_size fas fa-question-circle text-white"></i>
+						</a>
+						<p class="m-0 footer__icon_font_size footer_textcolor">問題回報</p>
+					</div>
+				</div>
+			</ul>
+		</div>
+			<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+			<!-- ＾＾＾＾＾＾show in deck＾＾＾＾＾ -->
+			<nav id="decktop_main_nav" class="decktop_main_nav navbar navbar-expand-lg navbar-expand-md navbar-light auto_bgc py-2 px-3 flex-xl-shrink-1 justify-content-md-center position-fixed w-100">
+				<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+				<div class="d-flex justify-content-between w-100 d-md-none d-xl-non">
+					<div class=" d-flex align-items-center">
+						<button class="btn mx-1 my-sm-0 border-0 auto_textcolor d-none"><i class="fas fa-angle-double-left"></i></button>
+						<button  id="main_nav_btn" class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    		<span><i class=" fas fa-bars text-light"></i></span>
+				  		</button>
+			  		</div>
+
+			 		<a id="moblie_Logo" class="moblie_Logo navbar-brand text-light mr-0 p-0" href="#"><img src="img/GA_LOGO.svg" alt="" class=""></a>
+			 		
+			 		<span class="px-1 d-none d-sm-none"></span>
+			 		<div id="mobile_search_shop" class="d-flex py-2 p-0 d-flex align-items-center list-unstyled">
+			 			<div class="nav-item w-100 text-center py-0">
+			 				<form class="form-inline my-2 my-lg-0 justify-content-end flex-nowrap">
+					      		<input id="mobile_SearchBar" class=" mobile_SearchBar form-control bg-transparent text-white invisible d-none" type="search" placeholder="Search" aria-label="Search">
+					      		<button id="mobile_search" class="mobile_search btn mx-1 my-sm-0 border-0 auto_textcolor" type="button">
+					      			<i class="fas fa-search my-sm-0"></i>
+					      		</button>
+			    			</form>
+			 			</div>
+			 			<div class="nav-item text-center py-0">
+				      		<button class="btn  my-sm-0 border-0 auto_textcolor" type="submit">
+				      			<i class="fas fa-shopping-cart px-0"></i>
+				      		</button>
+					     </div>	
+			 		</div>
+		 		</div>
+		 		<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+		 		<!-- ＾＾＾＾＾＾show in desk＾＾＾＾＾ -->
+			  	<div class="GA_container nav_btn collapse navbar-collapse justify-content-between w-100 d-none d-sm-none" id="navbarSupportedContent">
+			  		<a class="navbar-brand text-light mr-0 p-0 w-20" href="#"><img src="img/GA_LOGO.svg" alt="" class=""></a>
+				    <ul class="navbar-nav align-items-lg-center align-items-md-center">
+				      <li class="nav-item active">
+				        <a id="prduct_btn" class="deck_top_prduct_btn px-2 d-block auto_textcolor" href="#">產品</a>
+				      </li>
+				      <li class="nav-item dropdown position-relative">
+				        <a id="news_btn" class="px-2 d-block auto_textcolor" href="#">新聞</a>
+				        <div id="news_menu" class="dropdown-menu mt-4 bg-dark text-center position-absolute deck_top_hover_position">
+				        	<a class="dropdown-item auto_textcolor" href="">資訊新聞</a>
+				        	<a class="dropdown-item auto_textcolor" href="">電競新聞</a>
+				        	<a class="dropdown-item auto_textcolor" href="">促銷活動</a>
+				        </div>	
+				      </li>
+				      <li class="nav-item dropdown position-relative">
+				        <a id="chanel_btn" class="px-2 d-block auto_textcolor" href="#">頻道</a>
+				        <div id="chanel_menu" class="dropdown-menu mt-4 bg-dark text-center position-absolute deck_top_hover_position">
+				        	<a class="dropdown-item auto_textcolor" href="">電競賽事</a>
+				        	<a class="dropdown-item auto_textcolor" href="">賽事回顧</a>
+				        </div>	
+				      </li>
+				      <li class="nav-item">
+				        <a class="px-2 d-block auto_textcolor" href="#">關於</a>
+				      </li>
+				      <li class="nav-item">
+				      	<button class="btn mx-1 my-sm-0 border-0 auto_textcolor" type="submit">
+			      			<i class="fas fa-shopping-cart"></i>
+			      		</button>
+				      </li>	
+				      <li class="nav-item dropdown position-relative">
+				      	<button id="user_btn" class="btn mx- py-2 my-sm-0 border-0 auto_textcolor" type="button">
+			      			<i class="fas fa-user"></i>
+			      		</button>
+			      		<div id="user_menu" class="dropdown-menu mt-3 bg-dark text-center position-absolute deck_top_hover_position plus w-75">
+				        	<a class="dropdown-item auto_textcolor" href="">會員中心</a>
+				        	<a class="dropdown-item auto_textcolor" href="">幫助中心</a>
+				        	<a class="dropdown-item auto_textcolor" href="">登出</a>
+				        </div>
+				      </li>	
+				      <li class="nav-item">
+				      	<div class="d-none d-md-block">
+						<div id="deck_top_search" class="d-block w-100 form-inline my-2 my-lg-0 justify-content-end">
+					    	<button class="btn mx-1 my-sm-0 border-0 auto_textcolor" type="button">
+				      				<i class="fas fa-search my-2 my-sm-0"></i>
+				      		</button>
+			    		</div>
+					</div>
+				      </li>
+				    </ul>
+			  	</div>
+			  	<!-- ＾＾＾＾＾＾show in deck＾＾＾＾＾ -->
+			</nav>
+			<div id="deck_top_SearchBar" class="pt-2 deck_top_SearchBar d-none d-md-block position-fixed w-100 bg-dark">
+				<form  action="" class="d-flex p-2">
+					<input class=" form-control text-white bg-dark" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-light my-sm-0 auto_textcolor" type="button">
+				      	<i class="fas fa-search my-2 my-sm-0"></i>
+				    </button>
+				</form>
+			</div>
+			<div id="deck_top_prduct_hover" class="position-fixed w-100 deck_top_prduct_hover d-none d-md-block product_bgc">
+
+				<div id="deck_top_prduct_list" class="GA_container d-flex flex-nowrap">
+					<ul  class="sectin-ul py-3">
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/CorsairLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+							
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/RazerLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/LogLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+						</li >
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/MsiLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+</header>
+
+<div class="GA_container pt-5 my-5 p-0">
+	<div class="game_start">
+		<div class="GAFOX py-3">
+			<img src="img/fox.jpg" alt="">
+		</div>
+		<p class="GAFOX_text py-3 mx-auto">
+			哈囉！我是電競狐．哈比，是否不知道如何選購您心愛的電競單品嗎？
+	或者您還在猶豫買哪一款呢？沒關係！讓我來解決您的問題！按下下面
+	的按鈕讓我為您挑選最適合您的電競潮流單品！！
+		</p>
+		<button class="d-block start_game btn border-white text-white w-25 mx-auto">
+			開始遊戲
+		</button>
+	</div>
+	<div class="Q1">
+		<div class="d-flex">
+			<div class="question1 py-4">Ｑ１、您覺得您是以下哪種玩家呢？</div>
+			<div class="GAFOX py-3 px-5">
+				<img src="img/fox.jpg" alt="">
+			</div>
+		</div>
+		<div class="d-flex justify-content-around py-3">
+			<div class="answer answer1-1">初階玩家</div>
+			<div></div>
+			<div class="answer answer-1-2">高階玩家</div>
+		</div>
+	</div>
+</div>
+
+<footer class="auto_bgc text-center d-none d-md-block p-0 w-100">
+		<div class="d-flex justify-content-center align-items-center pt-2 container">
+			<a href="" class="d-block w-20 mx-2">
+				<img src="img/GA_LOGO.svg" alt="">
+			</a>
+			<div class="d-flex flex-column">
+				<div class="d-flex mx-2 my-1 mx-2">
+					<a href="" class="mx-2 auto_textcolor footer_font_size">產品<span>｜Product</span></a>
+					<a href="" class="mx-2 auto_textcolor footer_font_size">新聞<span>｜News</span></a>
+				</div>
+				<div class="d-flex mx-2 my-1 mx-2">
+					<a href="" class="mx-2 auto_textcolor footer_font_size ">頻道<span>｜Channel</span></a>
+					<a href="" class="mx-2 auto_textcolor footer_font_size">關於<span>｜About</span></a>
+				</div>
+			</div>
+			<div class="d-flex align-items-center mx-2">
+				<div class="mx-1 mt-2 cursor_point">
+					<a class="w-25" href="">
+						<i class="footer_icon_size fab fa-facebook-square text-white"></i>
+					</a>
+					<p class="m-0 footer__icon_font_size footer_textcolor">社群分享</p>
+				</div>
+				<div class="mt-1 mx-1 d-flex flex-column align-items-center justify-content-start cursor_point">
+					<div class="w-32 mt-1">
+						<a href="" class="d-block m-0 w-100 h-100 overflow-hidden pb-1 pt-0">
+							<img src="img/fox helper.svg" class="fit-img" alt="">
+						</a>
+					</div>
+					<p class="m-0 footer__icon_font_size footer_textcolor mb-1">小幫手</p>
+				</div>
+				<div class="mt-2 mx-1 cursor_point">
+					<a href=""><i class="footer_icon_size fas fa-question-circle text-white"></i></a>
+					<p class="m-0 footer__icon_font_size footer_textcolor">問題回報</p>
+				</div>
+			</div>
+		</div>
+		<div class="text-white pb-4 pt-2 footer_font_size">
+		Copyright @ Gaming Area. All rights reserved
+		</div>
+</footer>
+<footer class="container-fluid auto_bgc text-center d-md-none d-xl-none ">
+	<div class="d-flex flex-column justify-content-center align-items-center">
+		<a href="" class="d-block w-25 pt-2">
+				<img src="img/GA_mobileLogo.svg" alt="">
+		</a>
+		<div class="text-white pb-4 pt-2 footer_font_size">
+		Copyright @ Gaming Area. All rights reserved
+		</div>
+	</div>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/vegas/vegas.min.js"></script>
+<script src="bootstrap-4.3.1/dist/js/bootstrap.js"></script>
+<script src="js/lightslider/js/lightslider.js"></script>
+<script>
+	$("#vegas_bg").vegas({
+    slides: [
+        { 
+            video: {
+                src: [
+                    'video/We Are Logitech G.mp4',
+                    // '/videos/video.webm',
+                    // '/videos/video.ogv'
+                ],
+                loop: true,
+                mute: true
+            }
+        }
+    ]
+});
+	//＾＾＾＾＾＾＾＾header-vegas ＾＾＾＾＾＾＾
+	var LastScrollTop;
+	$(window).scroll(function(){
+		let PageHeight=$("body").height()
+		let WindowHeight=$(window).height()
+		let RealHeight=(PageHeight - WindowHeight)
+		let ScrollTop=$(this).scrollTop()
+		let WindowPersent=(ScrollTop / RealHeight *100)
+		WindowPersent=Math.round(WindowPersent)+"%"
+
+		if(LastScrollTop<ScrollTop){
+			$("#decktop_main_nav").addClass('active')
+			$("#deck_top_prduct_hover").addClass('active')
+			$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		}else {
+			$("#decktop_main_nav").removeClass('active')
+			$("#deck_top_prduct_hover").removeClass('active')
+		}
+
+		LastScrollTop=ScrollTop
+	})
+	//＾＾＾＾＾＾＾＾scroll funtion ＾＾＾＾＾＾＾
+
+
+	$("#main_nav_btn").click(function() {
+		$("#decktop_main_nav").addClass('active')
+		$("#mobile_main_nav").toggleClass('slide_in_right');
+		/* Act on the event */
+	});
+	$("#mabile_main_nav_btn").click(function() {
+		$("#decktop_main_nav").removeClass('active')
+		$("#mobile_main_nav").toggleClass('slide_in_right');
+		/* Act on the event */
+	});
+	//＾＾＾＾＾＾＾＾deck_top_nav-click funtion＾＾＾＾＾＾＾
+
+	$("#deck_top_search").click(function() {
+		$("#deck_top_SearchBar").toggleClass('active');
+	});
+
+	$("#mobile_search").click(function(){
+		$("#moblie_Logo").toggleClass('d-none')
+		$("#mobile_SearchBar").toggleClass('d-none')
+		$("#mobile_SearchBar").toggleClass('invisible')
+		$("#mobile_search_shop").toggleClass('w-100')
+		$("#mobile_SearchBar").toggleClass('flex-grow-1')
+	})
+
+
+
+	//＾＾＾＾＾＾＾＾search-bar-vissble click funtion＾＾＾＾＾＾＾
+	$("#news_btn").on('mouseenter',function() {
+		$("#news_menu").addClass('show')
+
+		$("#chanel_menu").removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		/* Act on the event */
+	});
+	$("#news_menu").mouseleave(function() {
+		$(this).removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+	});
+	//＾＾＾＾＾＾＾＾新聞＾＾＾＾＾＾＾
+
+	$("#chanel_btn").on('mouseenter',function() {
+		$("#chanel_menu").addClass('show')
+
+		$("#news_menu").removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		/* Act on the event */
+	});
+	$("#chanel_menu").mouseleave(function() {
+		$(this).removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#news_menu").removeClass('show')
+	});
+	//＾＾＾＾＾＾＾＾頻道＾＾＾＾＾＾＾
+	$("#user_btn").on('mouseenter',function() {
+		$("#user_menu").addClass('show')
+
+		$("#news_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		/* Act on the event */
+	});
+	$("#user_menu").mouseleave(function() {
+		$(this).removeClass('show')
+		$("#news_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+	});
+	//＾＾＾＾＾＾＾＾會員＾＾＾＾＾＾＾
+	$("#decktop_main_nav").mouseenter(function(){
+		$("#news_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+		$("#user_menu").removeClass('show')
+	})
+	//＾＾＾＾＾＾＾＾NAV機制＾＾＾＾＾＾＾
+
+	$("#prduct_btn").mouseenter(function(){
+		$("#news_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(60px)")
+		$("#deck_top_prduct_hover").addClass('button-glow')
+		$("#deck_top_SearchBar").removeClass('active')
+
+	})
+	$("#deck_top_prduct_list>ul").mouseleave(function(){
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		$("#deck_top_prduct_hover").removeClass('button-glow')
+	});
+	//＾＾＾＾＾＾＾＾drck top nav hover＾＾＾＾＾＾＾
+	var section=$(".sectin-ul li")
+	function toggleAccordion(){
+		section.removeClass('active');
+		section.find('.auto_textcolor').addClass('d-none')
+		section.find('.auto_textcolor').removeClass('d-block')
+		$(this).addClass('active');
+		$(this).find('.auto_textcolor').removeClass('d-none')
+		$(this).find('.auto_textcolor').addClass('d-block')
+
+	}
+
+	section.on('mouseenter',toggleAccordion);
+
+
+// 	$("#news_menu").on('mouseenter mouseleave','.dropdown',function(e){
+//   if (e.type === 'mouseenter')$("#news_menu").addClass('show');
+//   setTimeout(function(){
+//     $("#news_menu").toggleClass('show', $("#news_menu").is(':hover'));
+//     $('[data-toggle="dropdown"]', $("#news_menu")).attr('aria-expanded',$("#news_menu").is(':hover'));
+//   },500);
+// });
+// 	$("#chanel_menu").on('mouseenter mouseleave','.dropdown',function(e){
+//   if (e.type === 'mouseenter')$("#chanel_menu").addClass('show');
+//   setTimeout(function(){
+//     $("#chanel_menu").toggleClass('show', $("#chanel_menu").is(':hover'));
+//     $('[data-toggle="dropdown"]', $("#chanel_menu")).attr('aria-expanded',$("#chanel_menu").is(':hover'));
+//   },500);
+// });
+
+   $(function () {
+      var $tabButtonItem = $('#tab_button li'),
+         // $tabSelect = $('#tab-select'),
+         $tabContents = $('.tab_contents'),
+         activeClass = 'is-active';
+
+      $tabButtonItem.first().addClass(activeClass);
+      $tabContents.not(':first').hide();
+
+      $tabButtonItem.find('a').on('click', function (e) {
+         var target = $(this).attr('href');
+
+         $tabButtonItem.removeClass(activeClass);
+         $(this).parent().addClass(activeClass);
+         // $tabSelect.val(target);
+         $tabContents.hide();
+         $(target).show();
+         e.preventDefault();
+      });
+   });
+
+	
+
+</script>
+</body>
+</html>

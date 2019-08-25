@@ -1,0 +1,171 @@
+.login_bg {
+  min-height: 750px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.login_page_name {
+  max-width: 540px;
+  color: #fbcc4d;
+}
+
+.login_page_tabs {
+  max-width: 540px;
+  /* margin: 0 auto; */
+}
+
+.login_page_tab_button {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.login_page_tab_button li {
+  display: table-cell;
+  width: 20%;
+}
+
+.login_page_tab_button li a {
+  display: block;
+  padding: 0.5em;
+  background: #413e53;
+  text-align: center;
+  color: #ad9aff;
+  text-decoration: none;
+  height: 42px;
+  transition: 0.3s;
+}
+
+.login_page_tab_button li:not(:first-child) a {
+  border-left: none;
+}
+
+.login_page_tab_button li a:hover,
+.login_page_tab_button .is-active a {
+  background: #7165a7;
+  color: #ffffff;
+}
+
+.login_page_tab_contents {
+  padding: 0.5em 2em 1em;
+  color: #ffffff;
+  background: #7165a7;
+  min-height: 420px;
+  transition: 0.3s;
+}
+
+.login_page_tab_contents .form input {
+  border-radius: 0;
+  border: 0;
+}
+
+.login_page_tab_contents small {
+  color: #ffcc4d;
+}
+
+.login_page_tab01 .form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login_page_tab01 .form .form-check-mobile {
+  margin-left: 30px;
+}
+
+.login_page_tab01 .form .login_submit .btn {
+  background: #412f8f;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  max-width: 350px;
+}
+
+.login_page_tab01 .form .login_submit .btn:hover {
+  background: #413e53;
+  border: 1px solid #cccccc;
+}
+
+/* .login_page_tab01 .form .mobile_login_submit .btn {
+  background: #412f8f;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  max-width: 266px;
+} */
+
+/* .login_page_tab01 .form .forget_pw button.active {
+  border-bottom: 1px solid #fff;
+} */
+
+/* 桌機版-忘記密碼 */
+.login_page_tab01 .form .desk_forget_pw .modal-content {
+  border-radius: 0;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-header {
+  background: #211751;
+  border-radius: 0;
+  border: none;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-header .modal-title {
+  margin: 0 0 0 193px;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-body {
+  background: #7165a7;
+  border-radius: 0;
+  border: none;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-body .form-group {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-body .form-group i {
+  font-size: 1.6rem;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-footer {
+  background: #7165a7;
+  border-radius: 0;
+  border: none;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-footer .btn {
+  background: #412f8f;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  max-width: 300px;
+}
+
+.login_page_tab01 .form .desk_forget_pw .modal-footer .btn:hover {
+  background: #413e53;
+  border: 1px solid #cccccc;
+}
+
+.login_page_tab01 .login_page_slogan h4,
+.login_page_tab01 .login_page_slogan h5 {
+  color: #eeeeee;
+  /* font-style: oblique; */
+  /* text-decoration: underline; */
+}
+
+/* 登入頁CSS結束 */
+.login_page_tab02 .form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login_page_tab02 button {
+  background: #412f8f;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+}
+
+.login_page_tab02 button:hover {
+  background: #413e53;
+  border: 1px solid #cccccc;
+}

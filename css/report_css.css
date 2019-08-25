@@ -1,0 +1,77 @@
+.container-fluid .tabs {
+  max-width: 1140px;
+}
+
+.report_tabs {
+  max-width: 960px;
+}
+
+.report_tab_button {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.report_tab_button li {
+  display: table-cell;
+  width: 25%;
+}
+
+.report_tab_button li a {
+  display: block;
+  padding: 0.5em;
+  background: #413e53;
+  /* border-bottom: .8px solid #413E53; */
+  text-align: center;
+  color: #ad9aff;
+  text-decoration: none;
+  height: 45px;
+  transition: 0.3s;
+}
+
+.report_tab_button li:not(:first-child) a {
+  border-left: none;
+}
+
+.report_tab_button .is-active a {
+  background: #7165a7;
+  color: #ffffff;
+}
+
+.report_tab_contents {
+  padding: 0.5em 2em 1em;
+  color: #ffffff;
+  background: #7165a7;
+  min-height: 650px;
+}
+
+.report_tab_contents small {
+  color: #ffcc4d;
+}
+
+.report_tab01 button {
+  background: #412f8f;
+  border: 1px solid #cccccc !important;
+  border-radius: 0;
+}
+
+.report_tab01 button:hover {
+  background: #413e53;
+  border: 1px solid #cccccc;
+}
+
+.report_tab02 .row {
+  margin: 0 auto;
+}
+.report_history_card_btn {
+  border-radius: 2px;
+}
+.report_history_card_bg1 {
+  background-color: #412f8f;
+}
+.report_history_card_bg2 {
+  background-color: #594e8d;
+}

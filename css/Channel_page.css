@@ -1,0 +1,262 @@
+
+/* 標題桌機 */
+
+.GA_title{
+    background: #7165A7;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    clip-path: polygon(50% 25%, 100% 25%, 100% 43%, 87% 100%, 0 100%, 0% 25%);
+    margin:0;
+}
+.GA_title_line2 {
+    width: 2000px;
+    height: 8px;
+    margin: 0 0 -18px 0;
+    background: #7165A7;
+}
+
+.GA_title p {
+    position: absolute;
+    color: #FBCC4D;
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    vertical-align: middle;
+}
+
+/* 標題手機 */
+.GA_phone{
+    margin:0;
+}
+.GA_title_mobile {
+    width:100%;
+    height: 50px;
+    background: #7165A7;
+    color: #FFFFFF;
+    letter-spacing: 0.5rem;
+}
+
+/* 頁籤開始 */
+
+
+.Channel_Game_tabs {
+    /* max-width: 1140px; */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.Channel_Game_tabs .red_circle {
+    width: 15px;
+    height: 15px;
+    /* 正圓形，所以寬與高都設一樣 */
+    border-radius: 999em;
+    background-color: red;
+}
+
+#Channel_Game_tab-button {
+    display: table;
+    table-layout: fixed;
+    width: 50%;
+    margin: 0 0 -2px 0;
+    padding: 0;
+    list-style: none;
+    background-color: #413E53;
+}
+
+#Channel_Game_tab-button li {
+    display: table-cell;
+}
+
+#Channel_Game_tab-button li a {
+    display: block;
+    padding: .5em;
+    background: rgba(113, 101, 167, 0.445);
+    text-align: center;
+    color: #7165A7;
+    text-decoration: none;
+    width: 100%;
+    margin: 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.Channel_Game_tabs .logo_lol {
+    width: 97%;
+}
+
+.Channel_Game_tabs .logo_pubg {
+    width: 101%;
+}
+
+.Channel_Game_tabs .logo_overwatch {
+    width: 70%;
+}
+
+#Channel_Game_tab-button li a:hover,
+#Channel_Game_tab-button .is-active a {
+    border-bottom-color: transparent;
+    background: #7165A7;
+    ;
+}
+
+.Channel_Game_tab-contents {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+}
+
+
+.Channel_Game_tab-button-outer {
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.Channel_Game_Title {
+    letter-spacing: 0.2em;
+}
+
+.Channel_Game_int {
+    background: #7165A7;
+    /* background: rgba(113, 101, 167, 0.8); */
+}
+
+.Channel_Game_team {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.VS_text{
+    font-size: 1.5rem;   
+    text-align: center;
+    justify-content: center;
+    /* line-height:140px; */
+}
+
+.Channel_Game_team p {
+    margin-bottom: 3%;
+}
+
+.Channel_team_textTW {
+    letter-spacing: 0.4em;
+}
+
+.Channel_team_textEN{
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.fit_logo {
+    object-fit: cover;
+    max-width: 100%;
+    margin: 5% 0;
+}
+
+.Channel_Game_Vedio_id {
+    width: 100%;
+    height: 56px;
+    display: block;
+
+    /* background: #3165A7; 
+    width:100px;    
+    height:56px; */
+}
+
+.Channel_switch_vedio {
+    width: 100%;
+    background-color: #7165A7;
+    padding: .5em 1em .5em 1em;
+}
+
+#vedio_btnA,
+#vedio_btnB,
+#vedio_btnc,
+#vedio_btnd,
+#vedio_btnE,
+#vedio_btnF {
+    cursor: pointer;
+}
+
+/* 手機板 */
+.Channel_GM_tabs{
+    background-color: #7165A7;
+}
+.Channel_GM_tab-button-outer {
+    position: relative;
+    z-index: 2;
+    display: block;    
+    background-color: #413E53;
+}
+.Channel_M_btn{
+    list-style: none;
+}
+.Channel_M_btn a{  
+    color: #AD9AFF;
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 3%;  
+    cursor: pointer;  
+}
+
+.Channel_M_btn .active a{
+    color: #fff;
+    background: #7165A7;  
+}
+
+.Channel_M_btn a:hover{
+    border-bottom-color: transparent;
+    color: #fff;
+    background: #7165A7;  
+}
+
+.fight_btn{
+    background-color: #AD9AFF;    
+}
+.day_btn{
+    background-color: #4C38A2;    
+}
+.Mid_btn a{
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.Mid_btn a:hover{
+    color: #FBCC4D;
+    text-decoration: none;    
+}
+.Mid_btn p{
+    margin: 2%;
+}
+.M_times{
+    font-size: 1.4rem;
+}
+.t_name{    
+    text-align: center;
+    word-break: break-all;
+    white-space:pre-wrap;
+}
+
+.M_fit{   
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+#btnAm, 
+#btnBm, 
+#btnCm, 
+#btnDm, 
+#btnEm, 
+#btnFm{
+    cursor:pointer;
+}

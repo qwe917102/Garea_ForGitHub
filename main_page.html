@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<title>Title</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="js/vegas/vegas.min.css">
+<link rel="stylesheet" href="fontawesome/css/all.css">
+<link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="js/lightslider/css/lightslider.css">
+<link rel="stylesheet" href="css/all_css.css">
+
+</head>
+<body>
+<header class="container-fluid p-0">
+	<div class="d-flex justify-content-between">
+			<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+		<div id="mobile_main_nav" class="mobile_main_nav d-flex flex-column position-fixed vh-100 auto_bgc m-vw w-65 d-md-none d-xl-none align-items-center">
+			<a id="mabile_main_nav_btn" class="d-block align-self-start w-100 pt-4 pl-4 cursor_point"><i class="footer_icon_size fas fa-times auto_textcolor"></i></a>
+			<div class="w-50 d-flex justify-content-center pb-3 position-relative">
+				<a class="w-100 navbar-brand text-light mr-0 web_logo_mobile" href="#"><img src="img/GA_mobileLogo.svg" alt="" class=""></a>
+			</div>
+			<ul class="navbar-nav align-items-center w-75">
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">產品資訊</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">賽事新聞</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">電競頻道</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">會員中心</a>
+				</li>
+				<li class="nav-item w-100 text-center bordeR_bt_solid_1px_white">
+				    <a class="d-block auto_textcolor py-2" href="#">關於我們</a>
+				</li>
+				<div class="d-flex align-items-center w-100 pt-4 justify-content-center">
+					<div class="mx-1 mt-2 text-center cursor_point">
+						<a class="w-25" href="">
+							<i class="footer_icon_size fab fa-facebook-square text-white"></i>
+						</a>
+						<p class="m-0 footer__icon_font_size footer_textcolor">社群分享</p>
+					</div>
+					<div class="mt-2 mx-1 d-flex flex-column align-items-center justify-content-start cursor_point">
+						<div class="w-32">
+							<a href="" class="d-block m-0 w-100 h-100 overflow-hidden pb-1 pt-0">
+								<img src="img/fox helper.svg" class="fit-img" alt="">
+							</a>
+						</div>
+						<p class="m-0 footer__icon_font_size footer_textcolor mb-1">選購助手</p>
+					</div>
+					<div class="mt-2 mx-1 text-center cursor_point">
+						<a href="">
+							<i class="footer_icon_size fas fa-question-circle text-white"></i>
+						</a>
+						<p class="m-0 footer__icon_font_size footer_textcolor">問題回報</p>
+					</div>
+				</div>
+			</ul>
+		</div>
+			<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+			<!-- ＾＾＾＾＾＾show in deck＾＾＾＾＾ -->
+			<nav id="decktop_main_nav" class="decktop_main_nav navbar navbar-expand-lg navbar-expand-md navbar-light auto_bgc py-2 px-3 flex-xl-shrink-1 justify-content-md-center position-fixed w-100">
+				<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+				<div class="d-flex justify-content-between w-100 d-md-none d-xl-none">
+					<div class=" d-flex align-items-center">
+						<button class="btn mx-1 my-sm-0 border-0 auto_textcolor d-none"><i class="fas fa-angle-double-left"></i></button>
+						<button  id="main_nav_btn" class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    		<span><i class=" fas fa-bars text-light"></i></span>
+				  		</button>
+			  		</div>
+
+			 		<a id="moblie_Logo" class="moblie_Logo navbar-brand text-light mr-0 p-0" href="#"><img src="img/GA_LOGO.svg" alt="" class=""></a>
+			 		
+			 		<span class="px-1 d-none d-sm-none"></span>
+			 		<div id="mobile_search_shop" class="d-flex py-2 p-0 d-flex align-items-center list-unstyled">
+			 			<div class="nav-item w-100 text-center py-0">
+			 				<form class="form-inline my-2 my-lg-0 justify-content-end flex-nowrap">
+					      		<input id="mobile_SearchBar" class=" mobile_SearchBar form-control bg-transparent text-white invisible d-none" type="search" placeholder="Search" aria-label="Search">
+					      		<button id="mobile_search" class="mobile_search btn mx-1 my-sm-0 border-0 auto_textcolor" type="button">
+					      			<i class="fas fa-search my-sm-0"></i>
+					      		</button>
+			    			</form>
+			 			</div>
+			 			<div class="nav-item text-center py-0">
+				      		<button class="btn  my-sm-0 border-0 auto_textcolor" type="submit">
+				      			<i class="fas fa-shopping-cart px-0"></i>
+				      		</button>
+					     </div>	
+			 		</div>
+		 		</div>
+		 		<!-- ＾＾＾＾＾＾show in mobile＾＾＾＾＾ -->
+		 		<!-- ＾＾＾＾＾＾show in desk＾＾＾＾＾ -->
+			  	<div class="container nav_btn collapse navbar-collapse justify-content-between w-100 d-none d-sm-none position-relative" id="navbarSupportedContent">
+			  		<div class="d-flex w-100">
+				  		<a class="navbar-brand text-light mr-0 p-0 w-20" href="#"><img src="img/GA_LOGO.svg" alt="" class=""></a>
+					    <ul class="navbar-nav align-items-lg-center align-items-md-center mx-2">
+					      <li class="nav-item active">
+					        <a id="prduct_btn" class="deck_top_prduct_btn px-2 d-block auto_textcolor big_text" href="#">產品</a>
+					      </li>
+					      <li class="nav-item dropdown position-relative">
+					        <a id="news_btn" class="px-2 d-block auto_textcolor middle_text" href="#">新聞</a>
+					        <div id="news_menu" class="dropdown-menu mt-4 bg-dark text-center position-absolute deck_top_hover_position">
+					        	<a class="dropdown-item auto_textcolor" href="">資訊新聞</a>
+					        	<a class="dropdown-item auto_textcolor" href="">電競新聞</a>
+					        	<a class="dropdown-item auto_textcolor" href="">促銷活動</a>
+					        </div>	
+					      </li>
+					      <li class="nav-item dropdown position-relative">
+					        <a id="chanel_btn" class="px-2 d-block auto_textcolor big_text" href="#">頻道</a>
+					        <div id="chanel_menu" class="dropdown-menu mt-4 bg-dark text-center position-absolute deck_top_hover_position">
+					        	<a class="dropdown-item auto_textcolor" href="">電競賽事</a>
+					        	<a class="dropdown-item auto_textcolor" href="">賽事回顧</a>
+					        </div>	
+					      </li>
+					      <li class="nav-item">
+					        <a class="px-2 d-block auto_textcolor big_text" href="#">關於</a>
+					      </li>
+					  	</ul>
+				  	</div>
+				  	<ul class="navbar-nav align-items-lg-center align-items-md-center">
+				      <li class="nav-item">
+				      	<button class="btn mx-1 my-sm-0 border-0 auto_textcolor" type="submit">
+			      			<i class="fas fa-shopping-cart"></i>
+			      		</button>
+				      </li>	
+				      <li class="nav-item dropdown position-relative">
+				      	<button id="user_btn" class="btn mx- py-2 my-sm-0 border-0 auto_textcolor" type="button">
+			      			<i class="fas fa-user"></i>
+			      		</button>
+			      		<div id="user_menu" class="dropdown-menu mt-3 bg-dark text-center position-absolute deck_top_hover_position plus w-75">
+				        	<a class="dropdown-item auto_textcolor" href="">會員中心</a>
+				        	<a class="dropdown-item auto_textcolor" href="">幫助中心</a>
+				        	<a class="dropdown-item auto_textcolor" href="">登出</a>
+				        </div>
+				      </li>	
+				      <li class="nav-item">
+				      	<div class="d-none d-md-block">
+						<div id="deck_top_search" class="d-block w-100 form-inline my-2 my-lg-0 justify-content-end">
+					    	<button class="btn mx-1 my-sm-0 border-0 auto_textcolor" type="button">
+				      				<i class="fas fa-search my-2 my-sm-0"></i>
+				      		</button>
+			    		</div>
+					</div>
+				      </li>
+				    </ul>
+			  	</div>
+			  	<!-- ＾＾＾＾＾＾show in deck＾＾＾＾＾ -->
+			</nav>
+			<div id="deck_top_SearchBar" class="pt-3 deck_top_SearchBar d-none d-md-block position-fixed w-100 bg-dark">
+				<form  action="" class="d-flex p-2 container position-relative">
+					<input class=" form-control text-white bg-dark" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn my-sm-0 auto_textcolor input_search_btn" type="button">
+				      	<i class="fas fa-search my-2 my-sm-0"></i>
+				    </button>
+				</form>
+			</div>
+		<div id="deck_top_prduct_hover" class="deck_top_prduct_hover d-none d-md-block position-fixed w-100 d-none d-md-block">
+			<div class="product_bgc w-100 deck_top_prduct_hover_back">
+				<!-- <div class="w-25 nav_degBox"></div> -->
+				<div id="deck_top_prduct_list" class="container d-flex flex-nowrap position-relative">
+					
+					<ul  class="sectin-ul py-2 ">
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/CorsairLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+							
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/RazerLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+						</li>
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/LogLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+						</li >
+						<li class="accordion_item">
+							<a class="section-title pt-3 w-10 mx-3" href="#">
+								<img src="img/MsiLogo.svg" alt="" class="fit-image">
+							</a>
+							<div class="section-content pt-3">
+							   	<a class="auto_textcolor d-none px-1 mx-1" href="#">全部</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">滑鼠</a>
+								<a class="auto_textcolor d-none px-1 mx-1" href="#">鍵盤</a>
+							    <a class="auto_textcolor d-none px-1 mx-1" href="#">耳機</a>
+							  	<a class="auto_textcolor d-none px-1 mx-1" href="#">其他</a>    
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+<div id="vegas_bg" class="vegas_bg vh-100 position-relative">
+	<div class="container text-white container d-flex flex-column justify-content-end vh-100 pb-4">
+		<h2>為電競而生,以勝利為前提。<br>“Gaming Area”電子競技的最佳領導典範。</h2>
+		<button href="#" class="about_big_btn d-block border-light btn text-white w-25 mb-2 mt-3 glow-border">
+			<h3>關於我們</h3>
+		</button>
+	</div>
+</div>
+<div class="container-fluid p-0 bg_dark">
+	<div class="container logo_big d-flex justify-content-around">
+		<div class="w-20 p-3 m-2">
+			<img src="img/CorsairLogo.svg" alt="">
+		</div>
+		<div class="w-20 p-3 m-2">
+			<img src="img/RazerLogo.svg" alt="">
+		</div>
+		<div class="w-20 p-3 m-2">
+			<img src="img/LogLogo.svg" alt="">
+		</div>
+		<div class="w-20 p-3 m-2">
+			<img src="img/MsiLogo.svg" alt="">
+		</div>
+		
+	</div>
+</div>
+<div class="container-fluid py-2 bg_dark">
+	<h3 class="text-center text_color">熱門產品</h3>
+	<ul id="lightSlider">
+	  <li>
+	      <h3>First Slide</h3>
+	      <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+	  </li>
+	  <li>
+	      <h3>Second Slide</h3>
+	      <p>Lorem ipsum Excepteur amet adipisicing nisi.</p>
+	  </li>
+	  <li>
+	      <h3>Second Slide</h3>
+	      <p>Lorem ipsum Excepteur amet adipisicing nisi.</p>
+	  </li>
+	  <li>
+	      <h3>Second Slide</h3>
+	      <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+	  </li>
+	  <li>
+	      <h3>Second Slide</h3>
+	      <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+	  </li>
+	  <li>
+	      <h3>Second Slide</h3>
+	      <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+	  </li>
+	</ul>
+</div>
+<div class="container-fluid p-0 product_card_bgc">
+	<div class="container d-flex flex-column p-0 ">	
+		<div class="d-flex justify-content-center text-white pb-1 pt-5">
+			<div class="w-25 d-flex flex-column product_card_border mx-2">
+				<div class="align-self-end p-2">
+					<a class="cursor_point"><i class="far fa-heart"></i></a>
+				</div>
+				<div class="product_img_size cursor_point">
+					<!-- <img src="" alt=""> -->
+				</div>
+				<div class="py-2">
+					<h4>產品名稱</h4>
+					產品分類/產品分類/產品分類
+				</div>
+				<div class="d-flex justify-content-around align-baseline py-3">
+					<div class="w-50">
+						<h3>$3500</h3>
+					</div>
+					<div class="">
+						<button class="d-block border-light btn text-white">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="w-25 d-flex flex-column product_card_border mx-2">
+				<div class="align-self-end p-2">
+					<a class="cursor_point"><i class="far fa-heart"></i></a>
+				</div>
+				<div class="product_img_size cursor_point">
+					<!-- <img src="" alt=""> -->
+				</div>
+				<div class="py-2">
+					<h4>產品名稱</h4>
+					產品分類/產品分類/產品分類
+				</div>
+				<div class="d-flex justify-content-around align-baseline py-3">
+					<div class="w-50">
+						<h3>$3500</h3>
+					</div>
+					<div class="">
+						<button class="d-block border-light btn text-white">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="w-25 d-flex flex-column product_card_border mx-2">
+				<div class="align-self-end p-2">
+					<a class="cursor_point"><i class="far fa-heart"></i></a>
+				</div>
+				<div class="product_img_size cursor_point">
+					<!-- <img src="" alt=""> -->
+				</div>
+				<div class="py-2">
+					<h4>產品名稱</h4>
+					產品分類/產品分類/產品分類
+				</div>
+				<div class="d-flex justify-content-around align-baseline py-3">
+					<div class="w-50">
+						<h3>$3500</h3>
+					</div>
+					<div class="">
+						<button class="d-block border-light btn text-white">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center text-white pt-1 pb-5">
+			<div class="w-25 d-flex flex-column product_card_border mx-2">
+				<div class="align-self-end p-2">
+					<a class="cursor_point"><i class="far fa-heart"></i></a>
+				</div>
+				<div class="product_img_size cursor_point">
+					<!-- <img src="" alt=""> -->
+				</div>
+				<div class="py-2">
+					<h4>產品名稱</h4>
+					產品分類/產品分類/產品分類
+				</div>
+				<div class="d-flex justify-content-around align-baseline py-3">
+					<div class="w-50">
+						<h3>$3500</h3>
+					</div>
+					<div class="">
+						<button class="d-block border-light btn text-white">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="w-25 d-flex flex-column product_card_border mx-2">
+				<div class="align-self-end p-2">
+					<a class="cursor_point"><i class="far fa-heart"></i></a>
+				</div>
+				<div class="product_img_size cursor_point">
+					<!-- <img src="" alt=""> -->
+				</div>
+				<div class="py-2">
+					<h4>產品名稱</h4>
+					產品分類/產品分類/產品分類
+				</div>
+				<div class="d-flex justify-content-around align-baseline py-3">
+					<div class="w-50">
+						<h3>$3500</h3>
+					</div>
+					<div class="">
+						<button class="d-block border-light btn text-white">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="w-25 d-flex flex-column product_card_border mx-2">
+				<div class="align-self-end p-2">
+					<a class="cursor_point"><i class="far fa-heart"></i></a>
+				</div>
+				<div class="product_img_size cursor_point">
+					<!-- <img src="" alt=""> -->
+				</div>
+				<div class="py-2">
+					<h4>產品名稱</h4>
+					產品分類/產品分類/產品分類
+				</div>
+				<div class="d-flex justify-content-around align-baseline py-3">
+					<div class="w-50">
+						<h3>$3500</h3>
+					</div>
+					<div class="">
+						<button class="d-block border-light btn text-white">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container p-5">
+	<iframe src="" frameborder="0" class="w-100 vh-100 bg-light"></iframe>
+</div>
+<footer class="auto_bgc text-center d-none d-md-block p-0 w-100">
+		<div class="d-flex justify-content-center align-items-center pt-2 container">
+			<a href="" class="d-block w-20 mx-2">
+				<img src="img/GA_LOGO.svg" alt="">
+			</a>
+			<div class="d-flex flex-column">
+				<div class="d-flex mx-2 my-1 mx-2">
+					<a href="" class="mx-2 auto_textcolor footer_font_size">產品<span>｜Product</span></a>
+					<a href="" class="mx-2 auto_textcolor footer_font_size">新聞<span>｜News</span></a>
+				</div>
+				<div class="d-flex mx-2 my-1 mx-2">
+					<a href="" class="mx-2 auto_textcolor footer_font_size ">頻道<span>｜Channel</span></a>
+					<a href="" class="mx-2 auto_textcolor footer_font_size">關於<span>｜About</span></a>
+				</div>
+			</div>
+			<div class="d-flex align-items-center mx-2">
+				<div class="mx-1 mt-2 cursor_point">
+					<a class="w-25" href="">
+						<i class="footer_icon_size fab fa-facebook-square text-white"></i>
+					</a>
+					<p class="m-0 footer__icon_font_size footer_textcolor">社群分享</p>
+				</div>
+				<div class="mt-1 mx-1 d-flex flex-column align-items-center justify-content-start cursor_point">
+					<div class="w-32 mt-1">
+						<a href="" class="d-block m-0 w-100 h-100 overflow-hidden pb-1 pt-0">
+							<img src="img/fox helper.svg" class="fit-img" alt="">
+						</a>
+					</div>
+					<p class="m-0 footer__icon_font_size footer_textcolor mb-1">小幫手</p>
+				</div>
+				<div class="mt-2 mx-1 cursor_point">
+					<a href=""><i class="footer_icon_size fas fa-question-circle text-white"></i></a>
+					<p class="m-0 footer__icon_font_size footer_textcolor">問題回報</p>
+				</div>
+			</div>
+		</div>
+		<div class="text-white pb-4 pt-2 footer_font_size">
+		Copyright @ Gaming Area. All rights reserved
+		</div>
+</footer>
+<footer class="container-fluid auto_bgc text-center d-md-none d-xl-none ">
+	<div class="d-flex flex-column justify-content-center align-items-center">
+		<a href="" class="d-block w-25 pt-2">
+				<img src="img/GA_mobileLogo.svg" alt="">
+		</a>
+		<div class="text-white pb-4 pt-2 footer_font_size">
+		Copyright @ Gaming Area. All rights reserved
+		</div>
+	</div>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/vegas/vegas.min.js"></script>
+<script src="bootstrap-4.3.1/dist/js/bootstrap.js"></script>
+<script src="js/lightslider/js/lightslider.js"></script>
+<script>
+	$("#vegas_bg").vegas({
+    slides: [
+        { 
+            video: {
+                src: [
+                    'video/We Are Logitech G.mp4',
+                    // '/videos/video.webm',
+                    // '/videos/video.ogv'
+                ],
+                loop: true,
+                mute: true
+            }
+        }
+    ]
+});
+	//＾＾＾＾＾＾＾＾header-vegas ＾＾＾＾＾＾＾
+	var LastScrollTop;
+	$(window).scroll(function(){
+		let PageHeight=$("body").height()
+		let WindowHeight=$(window).height()
+		let RealHeight=(PageHeight - WindowHeight)
+		let ScrollTop=$(this).scrollTop()
+		let WindowPersent=(ScrollTop / RealHeight *100)
+		WindowPersent=Math.round(WindowPersent)+"%"
+
+		if(LastScrollTop<ScrollTop){
+			$("#decktop_main_nav").addClass('active')
+			$("#deck_top_prduct_hover").addClass('active')
+			$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		}else {
+			$("#decktop_main_nav").removeClass('active')
+			$("#deck_top_prduct_hover").removeClass('active')
+		}
+
+		LastScrollTop=ScrollTop
+	})
+	//＾＾＾＾＾＾＾＾scroll funtion ＾＾＾＾＾＾＾
+
+
+	$("#main_nav_btn").click(function() {
+		$("#decktop_main_nav").addClass('active')
+		$("#mobile_main_nav").toggleClass('slide_in_right');
+		/* Act on the event */
+	});
+	$("#mabile_main_nav_btn").click(function() {
+		$("#decktop_main_nav").removeClass('active')
+		$("#mobile_main_nav").toggleClass('slide_in_right');
+		/* Act on the event */
+	});
+	//＾＾＾＾＾＾＾＾deck_top_nav-click funtion＾＾＾＾＾＾＾
+
+	$("#deck_top_search").click(function() {
+		$("#deck_top_SearchBar").toggleClass('active');
+	});
+
+	$("#mobile_search").click(function(){
+		$("#moblie_Logo").toggleClass('d-none')
+		$("#mobile_SearchBar").toggleClass('d-none')
+		$("#mobile_SearchBar").toggleClass('invisible')
+		$("#mobile_search_shop").toggleClass('w-100')
+		$("#mobile_SearchBar").toggleClass('flex-grow-1')
+	})
+
+
+
+	//＾＾＾＾＾＾＾＾search-bar-vissble click funtion＾＾＾＾＾＾＾
+	$("#news_btn").on('mouseenter',function() {
+		$("#news_menu").addClass('show')
+
+		$("#chanel_menu").removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		/* Act on the event */
+	});
+	$("#news_menu").mouseleave(function() {
+		$(this).removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+	});
+	//＾＾＾＾＾＾＾＾新聞＾＾＾＾＾＾＾
+
+	$("#chanel_btn").on('mouseenter',function() {
+		$("#chanel_menu").addClass('show')
+
+		$("#news_menu").removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		/* Act on the event */
+	});
+	$("#chanel_menu").mouseleave(function() {
+		$(this).removeClass('show')
+		$("#user_menu").removeClass('show')
+		$("#news_menu").removeClass('show')
+	});
+	//＾＾＾＾＾＾＾＾頻道＾＾＾＾＾＾＾
+	$("#user_btn").on('mouseenter',function() {
+		$("#user_menu").addClass('show')
+
+		$("#news_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		/* Act on the event */
+	});
+	$("#user_menu").mouseleave(function() {
+		$(this).removeClass('show')
+		$("#news_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+	});
+	//＾＾＾＾＾＾＾＾會員＾＾＾＾＾＾＾
+	$("#decktop_main_nav").mouseenter(function(){
+		$("#news_menu").removeClass('show')
+		$("#chanel_menu").removeClass('show')
+		$("#user_menu").removeClass('show')
+	})
+	//＾＾＾＾＾＾＾＾NAV機制＾＾＾＾＾＾＾
+
+	$("#prduct_btn").mouseenter(function(){
+		$("#news_menu").removeClass('show')
+		$("#deck_top_prduct_hover").css("transform", "translateY(65px)")
+		$("#deck_top_prduct_hover").addClass('button-glow')
+		$("#deck_top_SearchBar").removeClass('active')
+
+	})
+	$("#deck_top_prduct_list>ul").mouseleave(function(){
+		$("#deck_top_prduct_hover").css("transform", "translateY(-130px)")
+		$("#deck_top_prduct_hover").removeClass('button-glow')
+	});
+	//＾＾＾＾＾＾＾＾drck top nav hover＾＾＾＾＾＾＾
+	var section=$(".sectin-ul li")
+	function toggleAccordion(){
+		section.removeClass('active');
+		section.find('.auto_textcolor').addClass('d-none')
+		section.find('.auto_textcolor').removeClass('d-block')
+		$(this).addClass('active');
+		$(this).find('.auto_textcolor').removeClass('d-none')
+		$(this).find('.auto_textcolor').addClass('d-block')
+
+	}
+
+	section.on('mouseenter',toggleAccordion);
+
+// 	$("#news_menu").on('mouseenter mouseleave','.dropdown',function(e){
+//   if (e.type === 'mouseenter')$("#news_menu").addClass('show');
+//   setTimeout(function(){
+//     $("#news_menu").toggleClass('show', $("#news_menu").is(':hover'));
+//     $('[data-toggle="dropdown"]', $("#news_menu")).attr('aria-expanded',$("#news_menu").is(':hover'));
+//   },500);
+// });
+// 	$("#chanel_menu").on('mouseenter mouseleave','.dropdown',function(e){
+//   if (e.type === 'mouseenter')$("#chanel_menu").addClass('show');
+//   setTimeout(function(){
+//     $("#chanel_menu").toggleClass('show', $("#chanel_menu").is(':hover'));
+//     $('[data-toggle="dropdown"]', $("#chanel_menu")).attr('aria-expanded',$("#chanel_menu").is(':hover'));
+//   },500);
+// });
+
+
+	// ^^^^^^^slider hot product^^^^^^^
+	$(document).ready(function() {
+    $("#lightSlider").lightSlider(); 
+  });
+ 
+	// Back To Top
+	$("body").append(
+		'<a href="javascript:void(0);" id="fixedTop"><i class="fas fa-arrow-up"></i></a>'
+	);
+
+	var fixedTop = $("#fixedTop");
+		fixedTop.on("click", function () {
+		$("html, body").animate({ scrollTop: 0 }, 500);
+	});
+
+	$(window).on("load scroll resize", function () {
+		var showTop = 100;
+		if ($(window).scrollTop() > showTop) {
+			fixedTop.fadeIn("normal");
+		} else {
+			fixedTop.fadeOut("normal");
+		}
+	});
+</script>
+</body>
+</html>
